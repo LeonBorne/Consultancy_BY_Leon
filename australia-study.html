@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in Australia</title>
+    <link rel="stylesheet" href="nav-style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", "Roboto", Arial, sans-serif;
+            color: #28333a;
+        }
+
+        span.red {
+            color: rgb(240, 50, 50);
+            font-family: inherit;
+        }
+
+        #first {
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+
+        #main-img-section {
+            width: 700px;
+            height: 500px;
+            overflow: hidden;
+
+        }
+
+        #main-img-section img {
+            width: 700px;
+            height: 500px;
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        #main-img-section div {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            text-transform: capitalize;
+            font-size: 50px;
+            font-weight: 600;
+            padding: 10px;
+            color: white;
+            text-shadow: 1px 2px black;
+        }
+
+        #y-study-section {
+            margin: 5px 10px;
+            /* display: inline-flex; */
+            width: 600px;
+
+
+        }
+
+        h2 {
+            color: rgb(14, 102, 143);
+            font-size: 40px;
+            font-family: "Roboto Condensed", "Poppins", Arial, sans-serif;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        #y-study-section ul {
+            line-height: 1.6;
+            word-spacing: 2px;
+        }
+
+        #y-study-section ul li {
+            margin-left: 5px;
+            list-style: outside;
+        }
+
+        .basic-info-section {
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+
+
+        table {
+            margin: auto;
+            border: 1px solid rgb(148, 148, 148);
+            width: 90vw;
+            border-collapse: collapse;
+        }
+
+        table th {
+            background-color: #def1f5;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+
+        table td {
+            font-size: 1em;
+        }
+
+        table th,
+        table td {
+            text-align: left;
+            border: 1px solid #e2e2e2;
+            padding: 10px;
+        }
+
+        table tr:nth-child(2n + 1),
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .note {
+            border: 1px solid yellow;
+            background-color: #ffffac;
+            margin: 10px 60px;
+            font-size: 15px;
+            color: #3e3e3e;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .focus {
+            margin: 10px 60px;
+            font-size: 17px;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        #step-process-list {
+            margin-left: 50px;
+            font-size: 1.05em;
+        }
+
+        #step-process-list li {
+            line-height: 1.6;
+            list-style-position: inside;
+        }
+
+        details {
+            margin-left: 50px;
+        }
+
+        summary {
+            cursor: pointer;
+        }
+
+        summary:hover {
+            text-decoration: underline;
+        }
+
+        ul.details-list {
+            margin-left: 70px;
+        }
+
+        #parent-university-container {
+            margin: auto;
+            width: 80vw;
+            justify-content: space-around;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        #parent-university-container .university-container {
+            display: flex;
+            width: 300px;
+            height: 350px;
+            border: 1px solid rgb(233, 233, 233);
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: 0.3s all ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #parent-university-container .university-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .university-container img{
+            position: relative;
+            top: 0;
+            width: 300px;
+            height: 200px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            align-self: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .university-container h3{
+            text-decoration: underline;
+        }
+
+        .university-container .info{
+            height: 100px;
+            margin-top: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="nav-container">
+        <a class="nav-anchor" id="main-logo" href="">
+
+            <img src="logo.jpeg" alt="Logo Image" width="100px" height="50px">
+
+        </a>
+
+        <nav>
+            <a class="nav-anchor" href="#" id="study-abroad">Study Abroad <svg xmlns="http://www.w3.org/2000/svg"
+                    height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                </svg></a>
+            <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
+            <a class="nav-anchor" href="about-us.html">About Us</a>
+            <a class="nav-anchor" href="services.html">Services</a>
+            <a class="nav-anchor" id="contact-form" href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div id="study-abroad-hover">
+
+        <a class="country-container" href="canada-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+            Canada
+        </a>
+
+        <a class="country-container" href="japan-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
+            Japan
+        </a>
+
+        <a class="country-container" href="indis-study.html">
+            <img src="https://cdn.britannica.com/97/1597-050-008F30FA/Flag-India.jpg" alt="">
+            India
+        </a>
+
+        <a class="country-container" href="nepal-study.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg" alt="">
+            Nepal
+        </a>
+
+        <a class="country-container" href="australia-study.html">
+            <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+            Australia
+        </a>
+
+        <a class="country-container" href="uk-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+            UK
+        </a>
+
+        <a class="country-container" href="usa-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+            USA
+        </a>
+
+        <a class="country-container" href="germany-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+            Germany
+        </a>
+
+    </div>
+
+    <main>
+        <div id="first">
+            <section id="main-img-section">
+                <img src="australia-main-img.jpg" alt="Australia Image">
+                <div>
+                    Study in <br><span class="red">Australia from Nepal</span>
+                </div>
+            </section>
+
+            <section id="y-study-section">
+
+                <h2>Why study in <span class="red">Australia?</span></h2>
+
+                <ul>
+                    <li> Australia remains one of the top choices for Nepali students looking to study abroad — known
+                        for
+                        its world-class education
+                        system and student-friendly environment.</li>
+                    <li>The country offers globally recognized universities, affordable tuition options, and a safe,
+                        multicultural atmosphere that
+                        helps international students feel at home.</li>
+                    <li>Australian degrees are highly valued by employers around the world, and graduates benefit from
+                        post-study work
+                        opportunities that build real-world experience.</li>
+                    <li>Universities in Australia focus on hands-on learning, research, and skill-based education —
+                        helping
+                        students become
+                        confident and career-ready.</li>
+                    <li>With modern labs, libraries, and digital learning facilities, students gain both theoretical and
+                        practical knowledge.</li>
+                    <li>Professors and instructors are experienced professionals who bring real industry insight into
+                        the
+                        classroom.</li>
+                    <li>For students in Nepal, studying in Australia means access to quality education, global exposure,
+                        and
+                        a lifestyle that balances
+                        study, work, and exploration.</li>
+
+                </ul>
+
+            </section>
+        </div>
+
+
+        <section id="requirements-section" class="basic-info-section">
+            <h2>English Requirements <span class="red">to Study in Australia</span></h2>
+
+            <table>
+                <tr>
+                    <th>Level</th>
+                    <th>Academic</th>
+                    <th>IELTS / PTE (typical)</th>
+                </tr>
+
+                <tr>
+                    <td>Bachelor</td>
+                    <td>Minimum GPA 2.4 (varies by university & course)</td>
+                    <td>IELTS 6.0 (no band &lt; 5.5) / PTE 50</td>
+                </tr>
+
+                <tr>
+                    <td>Master</td>
+                    <td>Minimun GPA 2.6 with relevant background</td>
+                    <td>IELTS 6.5 (no band &lt; 6.0) / PTE 57 (no band &lt; 54)</td>
+                </tr>
+
+            </table>
+            <div class="note">
+                ⚠️ Requirements vary depending on the university and program. Always verify with the official provider.
+                Check our <a href="preparation-classes.html" style="color: blue;">IELTS/PTE Preparation page</a> for
+                more info.
+            </div>
+
+
+        </section>
+
+        <section id="cost-budget-section" class="basic-info-section">
+            <h2>Typical Costs <span class="red"> & Budget</span></h2>
+
+            <table>
+
+                <tr>
+                    <th>Item</th>
+                    <th>Estimated Amount</th>
+                </tr>
+
+                <tr>
+                    <td>Tuition (per year)</td>
+                    <td>AUD 20,000 - 35,000</td>
+                </tr>
+
+                <tr>
+                    <td>Living Costs (per year)</td>
+                    <td>AUD 29,710</td>
+                </tr>
+
+                <tr>
+                    <td>OSHC (Health Insurance)</td>
+                    <td>AUD 500 - 800 per year</td>
+                </tr>
+
+                <tr>
+                    <td>Visa Application Fee Form</td>
+                    <td>AUD 1,600</td>
+                </tr>
+
+            </table>
+
+            <div class="note">
+                Note: Costs depend on your lifestyle, location, and chosen institution.
+            </div>
+        </section>
+
+
+        <section id="step-process-section" class="basic-info-section">
+            <h2>Study in Australia : <span class="red">Step By Step Process</span></h2>
+
+            <ol id="step-process-list">
+
+                <li>
+                    Shortlist your course and university
+                </li>
+                <li>
+                    Prepare academic documents & take IELTS / PE
+                </li>
+                <li>
+                    Submit your application and receive on offer letter
+                </li>
+                <li>
+                    Arrange funds and pay initial fees to get Confirmation of Enrolment (CoE)
+                </li>
+                <li>
+                    Complete medicals (HAP), OSHC, and biometrics
+                </li>
+                <li>
+                    Submit your visa application and wait for decision
+                </li>
+                <li>
+                    Pre-departure preparation: accomodation, flights, and orientation
+                </li>
+
+            </ol>
+
+            <div class="focus">
+                Abroad Bridge Consultancy assists you at every stage — from choosing the right course to visa approval.
+            </div>
+        </section>
+
+
+        <section id="document-section" class="basic-info-section">
+            <h2>Document Checklist</h2>
+
+            <details>
+                <summary>Offer Level Docuemtns</summary>
+                <ul class="details-list">
+                    <li>Academic certificates & transcripts</li>
+                    <li>Passport</li>
+                    <li>English proficiency test results</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Financial Documents</summary>
+                <ul class="details-list">
+                    <li>Proof of sufficient funds</li>
+                    <li>Bank statements</li>
+                    <li>Loan Documents</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Health & Character Documents</summary>
+                <ul class="details-list">
+                    <li>Health examination results (HAP ID)</li>
+                    <li>Police clearance certificate</li>
+                </ul>
+            </details>
+
+            <div class="note">
+                ⚠️Always verify with the <a href="#" style="color: blue;">Australian High Commission</a> or official
+                university websites, as requirements may change.
+            </div>
+
+        </section>
+
+        <section id="scholarship-section" class="basic-info-section">
+
+            <h2>Scholarships, Rights <span class="red">& Post-Study Work</span></h2>
+
+            <details>
+                <summary>
+                    Merit-based scholarships available from universities and government programs
+                </summary>
+            </details>
+
+            <details>
+                <summary>
+                    Work while studying (up to 48 hrs/fortnight during study)
+                </summary>
+            </details>
+
+            <details>
+                <summary>
+                    Post-study work visa duration varies by degree level and location
+                </summary>
+            </details>
+
+        </section>
+
+
+        <section id="popular-universities-section" class="basic-info-section">
+            <h2>Popular Universities <span class="red">in Australia</span></h2>
+
+            <div id="parent-university-container">
+
+                <a class="university-container" href="#">
+                    <img src="sydney-university.jpg" alt="sydney-university">
+                    <h3>University of Sydney</h3>
+                    <div class="info">
+                        Australia's Leading University, Ranked 1st in Australia for international student diversity and 25th in the world overall
+                    </div>
+                </a>
+
+                <a class="university-container" href="#">
+                    hello
+                </a>
+
+                <a class="university-container" href="#">
+                    hello
+                </a>
+
+                <a class="university-container" href="#">
+                    hello
+                </a>
+
+                <a class="university-container" href="#">
+                    hello
+                </a>
+
+                <a class="university-container" href="#">
+                    hello
+                </a>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <script src="nav-script.js"></script>
+</body>
+
+</html>
