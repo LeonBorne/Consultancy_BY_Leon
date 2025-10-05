@@ -18,11 +18,9 @@ header {
     text-transform: uppercase;
     font-family: "Roboto Condensed", Arial, sans-serif !important;
     font-weight: 600;
-}
-
-header.bottom-styled {
     box-shadow: 0px 2px 10px #717171;
 }
+
 
 nav {
     display: flex;
@@ -113,7 +111,12 @@ nav {
 }
 
 .country-container:hover {
-    box-shadow: 0px 2px 0px 0px black;
+    outline-offset: -20px;
+    outline-width: 2px;
+    outline-color: green;
+    outline-style: dotted;
+
+    /* box-shadow: 0px 2px 0px 0px black; */
 }
 
 #study-abroad-hover .country-container img {

@@ -24,6 +24,7 @@
       justify-content: center;
       align-items: center;
       height: 570px;
+      font-family: "Poppins", "Roboto", Airal, sans-serif;
     }
 
     #main-text {
@@ -70,7 +71,7 @@
   <header id="nav-container">
     <a class="nav-anchor" id="main-logo" href="">
 
-      <img src="logo.jpeg" alt="" width="100px" height="50px">
+      <img src="logo.jpeg" alt="Logo Image" width="100px" height="50px">
 
     </a>
 
@@ -165,13 +166,11 @@
     function showMore() {
       clearTimeout(hideTimer);
       HoverMenu.classList.add("show");
-      NavBar.classList.add("bottom-styled")
       StudyAbroad.innerHTML = "Study Abroad <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='#000000'><path d='m296-345-56-56 240-240 240 240-56 56-184-183-184 183Z'/></svg>";
     }
 
     function hideMore() {
       HoverMenu.classList.remove("show");
-      NavBar.classList.remove("bottom-styled")
       StudyAbroad.innerHTML = 'Study Abroad <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg>'
     }
 
