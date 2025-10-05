@@ -20,8 +20,6 @@ header {
     font-weight: 600;
     box-shadow: 0px 2px 10px #717171;
 }
-
-
 nav {
     display: flex;
     gap: 55px;
