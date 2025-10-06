@@ -22,7 +22,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     height: 80px;
     font-size: 17px;
     text-transform: uppercase;
@@ -124,12 +124,12 @@ nav {
 }
 
 .country-container:hover {
-    outline-offset: -20px;
+    /* outline-offset: -20px;
     outline-width: 2px;
     outline-color: green;
-    outline-style: dotted;
+    outline-style: solid; */
 
-    /* box-shadow: 0px 2px 0px 0px black; */
+    box-shadow: -1px 1px 0px 0px black;
 }
 
 #study-abroad-hover .country-container img {
