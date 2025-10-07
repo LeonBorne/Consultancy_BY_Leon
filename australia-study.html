@@ -21,18 +21,18 @@
         }
 
         .top-info-section {
-            margin-top: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
+            /* margin-top: 10px; */
+            /* margin-left: 10px; */
+            /* margin-right: 10px; */
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: column;
             flex-wrap: nowrap;
             gap: 20px;
         }
 
         #main-img-section {
-            width: 700px;
-            height: 500px;
+            width: 100vw;
+            height: 600px;
             overflow: hidden;
             align-self: center;
             justify-self: center;
@@ -41,23 +41,24 @@
         }
 
         #main-img-section img {
-            width: 700px;
-            height: 500px;
+            width: 100vw;
+            height: 600px;
             overflow: hidden;
             object-fit: cover;
+            object-position: bottom;
             border-radius: 10px;
         }
 
         #main-img-section div {
-            /*position: absolute;
+            position: absolute;
             top: 120px;
-            right: 100px;*/
+            right: 100px;
 
-            position: relative;
+            /* position: relative;
             top: -470px;
-            left: 80px;
+            left: 80px; */
             text-transform: capitalize;
-            font-size: 50px;
+            font-size: 55px;
             font-weight: 600;
             padding: 10px;
             color: white;
@@ -65,11 +66,9 @@
         }
 
         #y-study-section {
-            margin: 5px 0px 5px 20px;
-            /* display: inline-flex; */
-            width: 600px;
-
-
+            margin-top: 30px;
+            margin-right: 250px;
+            margin-left: 250px;
         }
 
         h2 {
@@ -81,19 +80,19 @@
         }
 
         #y-study-section ul {
-            line-height: 1.6;
+            line-height: 1.5;
             word-spacing: 2px;
         }
 
         #y-study-section ul li {
-            margin-left: 5px;
+            margin: 5px;
             list-style: outside;
         }
 
         .basic-info-section {
-            margin-top: 100px;
-            margin-bottom: 100px;
-            margin-left: 40px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px;
             opacity: 0;
         }
 
@@ -201,8 +200,6 @@
         }
 
         .university-container img {
-            /* position: relative;
-            top: 0; */
             width: 300px;
             height: 200px;
             border-top-left-radius: 20px;
@@ -228,67 +225,66 @@
 <body>
 
     <header id="nav-container">
-        <a class="nav-anchor" id="main-logo" href="">
+    <a class="nav-anchor" id="main-logo" href="">
 
-            <img src="Images/logo.jpg" alt="Logo Image" width="100px" height="50px">
+      <img src="Images/logo.jpg" alt="Logo Image" width="100px" height="50px">
 
-        </a>
+    </a>
 
-        <nav>
-            <a class="nav-anchor" href="#" id="study-abroad">Study Abroad <svg xmlns="http://www.w3.org/2000/svg"
-                    height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
-                    <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
-                </svg></a>
-            <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
-            <a class="nav-anchor" href="about-us.html">About Us</a>
-            <a class="nav-anchor" href="services.html">Services</a>
-            <a class="nav-anchor" id="contact-form" href="contact-us.html">Contact Us</a>
-        </nav>
-    </header>
+    <nav>
+      <a class="nav-anchor" href="#" id="study-abroad">Study Abroad <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></a>
+      <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
+      <a class="nav-anchor" href="about-us.html">About Us</a>
+      <a class="nav-anchor" href="services.html">Services</a>
+      <a class="nav-anchor" id="contact-form" href="contact-us.html">Contact Us</a>
+    </nav>
+  </header>
 
-    <div id="study-abroad-hover">
+  <div id="study-abroad-hover">
 
-        <a class="country-container" href="canada-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
-            Canada
-        </a>
+       <a class="country-container" href="australia-study.html">
+      <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+      Australia
+    </a>
 
-        <a class="country-container" href="japan-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
-            Japan
-        </a>
+    <a class="country-container" href="canada-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+      Canada
+    </a>
 
-        <a class="country-container" href="indis-study.html">
-            <img src="https://cdn.britannica.com/97/1597-050-008F30FA/Flag-India.jpg" alt="">
-            India
-        </a>
+    <a class="country-container" href="japan-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
+      Japan
+    </a>
 
-        <a class="country-container" href="nepal-study.html">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg" alt="">
-            Nepal
-        </a>
+    <a class="country-container" href="southkorea-study.html">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png" alt="">
+      South Korea
+    </a>
 
-        <a class="country-container" href="australia-study.html">
-            <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
-            Australia
-        </a>
+    <a class="country-container" href="france-study.html">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
+      France
+    </a>
 
-        <a class="country-container" href="uk-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
-            UK
-        </a>
+ 
 
-        <a class="country-container" href="usa-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
-            USA
-        </a>
+    <a class="country-container" href="uk-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+      UK
+    </a>
 
-        <a class="country-container" href="germany-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
-            Germany
-        </a>
+    <a class="country-container" href="usa-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+      USA
+    </a>
 
-    </div>
+    <a class="country-container" href="germany-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+      Germany
+    </a>
+
+  </div>
 
     <main>
         <div class="top-info-section">
@@ -596,7 +592,7 @@
             (entries) => {
                 entries.forEach((entry) => {
                     // Require the element to be at least 50% visible
-                    if (entry.intersectionRatio >= 0.5) {
+                    if (entry.intersectionRatio >= 0.25) {
                         // pick a random animation class and then add it
                         const randomIndex = Math.floor(Math.random() * animation_classes.length);
                         const randomAnimation = animation_classes[randomIndex];
@@ -609,7 +605,7 @@
                 });
             },
             {
-                threshold: 0.5, 
+                threshold: 0.25, 
                 rootMargin: "0px 0px -10% 0px" 
             }
         );
