@@ -49,20 +49,58 @@
             border-radius: 10px;
         }
 
-        #main-img-section div {
+        #image-overlay {
             position: absolute;
-            top: 120px;
-            right: 100px;
+            top: 80px;
+            width: 100vw;
+            height: 600px;
+            text-align: center;
+            padding-right: 200px;
+            padding-left: 200px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            gap: 20px;
 
             /* position: relative;
             top: -470px;
             left: 80px; */
-            text-transform: capitalize;
+            background-color: rgba(0, 0, 0, 0.616);
+            box-sizing: border-box;
+        }
+
+        #image-overlay #main-heading{
+            margin-top: 100px;
             font-size: 55px;
-            font-weight: 600;
-            padding: 10px;
+            font-weight: 800;
+            text-transform: capitalize;
             color: white;
-            text-shadow: 1px 2px black;
+        }
+
+        #image-overlay #main-info{
+            font-weight: 500;
+            color: white;
+            font-size: 23px;
+        }
+
+        #image-overlay #main-more-btn{
+            padding: 10px 20px;
+            background-color: #38ac38;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        #image-overlay #main-more-btn:hover{
+            background-color: #339e33;
+        }
+
+        #image-overlay #main-more-btn #learn-more-btn{
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
         }
 
         #y-study-section {
@@ -109,16 +147,21 @@
             font-size: 1.05em;
             font-weight: 600;
         }
-
+        
+        
         table td {
             font-size: 1em;
         }
-
+        
         table th,
         table td {
             text-align: left;
             border: 1px solid #e2e2e2;
             padding: 10px;
+        }
+
+        table tr{
+            background-color: white;
         }
 
         table tr:nth-child(2n + 1),
@@ -171,54 +214,32 @@
             margin-left: 70px;
         }
 
-        #parent-university-container {
-            margin: auto;
-            width: 80vw;
-            justify-content: space-around;
+        #university-list{
+            margin-left: 70px;
+            margin-right: 300px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
-        #parent-university-container .university-container {
-            display: flex;
-            width: 300px;
-            height: 390px;
-            border: 1px solid rgb(218, 218, 218);
-            border-radius: 20px;
-            align-items: center;
-            flex-direction: column;
-            transition: 0.3s all ease;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0px 1px 10px #dddddd;
+        #university-list ul li{
+            list-style-type: "➤   ";
         }
 
-        #parent-university-container .university-container:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.37);
-        }
-
-        .university-container img {
-            width: 300px;
-            height: 200px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            /* margin-bottom: 10px; */
-        }
-
-        .university-container h3 {
-            margin: 0;
-            padding: 0;
+        #university-list ul li:hover{
             text-decoration: underline;
-            margin-top: 5px;
+            text-decoration-color: blue;
         }
 
-        .university-container .info {
-            height: 100px;
-            margin: 5px;
-            text-align: center;
+        #university-list ul li a{
+            color: blue;
+            text-decoration: none;
         }
+
+
+    
+
+        
     </style>
 </head>
 
@@ -290,10 +311,23 @@
         <div class="top-info-section">
             <section id="main-img-section">
                 <img src="Images/australia-main-img.jpg" alt="Australia Image">
-                <div>
-                    Study in <br><span class="red">Australia from Nepal</span>
+                <div id="image-overlay">
+                    <div id="main-heading">
+                        Study in <span class="red">Australia from Nepal</span>
+                    </div>
+
+                    <div id="main-info">
+                        If you love sunshine, open spaces, and a relaxed lifestyle, Australia offers the perfect mix of world-class education and adventure.
+                    </div>  
+
+                    <div id="main-more-btn">
+                        <a href="#learn-more" id="learn-more-btn">Take me</a>
+                    </div>
+
                 </div>
             </section>
+
+            <div id="learn-more" style="opacity: 0; height: 50px;"></div>
 
             <section id="y-study-section">
 
@@ -499,63 +533,20 @@
         <section id="popular-universities-section" class="basic-info-section">
             <h2>Popular Universities <span class="red">in Australia</span></h2>
 
-            <div id="parent-university-container">
+            <div id="university-list">
+                <ul>
+                    <li><a href="">University of Sydney </a></li>
+                    <li><a href="">La Trobe University</a></li>
+                    <li><a href="">University of Tashmania</a></li>
+                </ul>
 
-                <a class="university-container" href="#">
-                    <img src="Images/sydney-university.jpg" alt="sydney-university">
-                    <h3>University of Sydney</h3>
-                    <div class="info">
-                        Australia's Leading University, Ranked 1st in Australia for international student diversity and
-                        25th in the world overall.
-                    </div>
-                </a>
-
-                <a class="university-container" href="#">
-                    <img src="Images/la-trobe-university.jpg" alt="La Trobe University">
-                    <h3>La Trobe University</h3>
-                    <div class="info">
-                        La Trobe University is a public research university based in Melbourne, Victoria, Australia.
-                    </div>
-                </a>
-
-                <a class="university-container" href="#">
-                    <img src="Images/tasmania-university.jpg" alt="Tasmania university">
-                    <h3>University of Tasmania</h3>
-                    <div class="info">
-                        The University of Tasmania (UTAS) is a public research university, primarily located in
-                        Tasmania, Australia.
-                    </div>
-                </a>
-
-                <a class="university-container" href="#">
-                    <img src="Images/western-sydney-university.jpg" alt="Western sydney University">
-                    <h3>Western Sydney University</h3>
-                    <div class="info">
-                        Western Sydney University is a leading Australian institution ranked among the top 250
-                        universities globally.
-                    </div>
-                </a>
-
-                <a class="university-container" href="#">
-                    <img src="Images/deakin-university.jpg" alt="Deakin University">
-                    <h3>Deakin University</h3>
-                    <div class="info">
-                        Deakin University is a public research university in Victoria, Australia consistently ranked
-                        highly in student satisfaction.
-                    </div>
-                </a>
-
-                <a class="university-container" href="#">
-                    <img src="Images/newcastle-university.jpg" alt="Newcastle University">
-                    <h3>University of Newcastle</h3>
-                    <div class="info">
-                        The University of Newcastle is a member of the Australian Technology Network, Universities
-                        Australia and the Association to Advance Collegiate Schools of Business.
-                    </div>
-                </a>
+                <ul>
+                    <li><a href="">Western Sydney University</a></li>
+                    <li><a href="">Deakin Univeristy</a></li>
+                    <li><a href="">University of Newcastle</a></li>
+                </ul>
 
             </div>
-
 
         </section>
 
@@ -580,10 +571,6 @@
         ];
         const animation_classes = [
             "animate-slideFromLeft",
-            "animate-slideFromRight",
-            "animate-slideDown",
-            "animate-slideUp",
-            "animate-fadeIn"
         ];
 
         const final_classes = classes_to_animate.join(", ");
@@ -593,11 +580,10 @@
                 entries.forEach((entry) => {
                     // Require the element to be at least 50% visible
                     if (entry.intersectionRatio >= 0.25) {
-                        // pick a random animation class and then add it
-                        const randomIndex = Math.floor(Math.random() * animation_classes.length);
-                        const randomAnimation = animation_classes[randomIndex];
+                        
+                        const selectedAnimation  = animation_classes[0]
 
-                        entry.target.classList.add(randomAnimation);
+                        entry.target.classList.add(selectedAnimation);
 
                         // stop observing once the animation is applied
                         observer.unobserve(entry.target);

@@ -6,8 +6,14 @@
     color: inherit;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     overflow-x: hidden;
+    background: linear-gradient(135deg, white, #e4e4e4);
+
 }
 
 *{
