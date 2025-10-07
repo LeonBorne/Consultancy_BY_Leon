@@ -1,5 +1,5 @@
 .animate-slideFromLeft{
-    animation: slideFromLeft 0.6s ease-in forwards;
+    animation: slideFromLeft 0.6s ease forwards;
 }
 
 .animate-slideFromRight{
@@ -22,7 +22,7 @@
 @keyframes slideFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-30px);
     }
 
     100% {
@@ -34,7 +34,7 @@
 @keyframes slideFromRight {
     0% {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(30px);
     }
 
     100% {
@@ -46,7 +46,7 @@
 @keyframes slideDown {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(30px);
     }
 
     100% {
@@ -58,7 +58,7 @@
 @keyframes slideUp {
     0% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-30px);
     }
 
     100% {
