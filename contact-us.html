@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="nav-style.css">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", "Roboto", Arial, sans-serif;
+            color: #28333a;
+        }
+
+        span.red{
+            color: rgb(240, 50, 50);
+            font-family: inherit;
+        }
+
+        #top-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 70px;
+            gap: 30px;
+        }
+
+        #top-container #info-regarding-contact{
+            /* text-align: center; */
+            display: flex;
+            flex-direction: column;
+            width: 615px;
+        }
+
+
+        #info-regarding-contact h2{
+            font-size: 70px;
+            font-weight: 600;
+            font-family: "Roboto Condensed", "Poppins", "Roboto", Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        #info-regarding-contact #p-info{
+            font-size: 17px;
+        }
+
+        #info-regarding-contact #contact-info{
+            margin-top: 20px;
+        }
+
+        #contact-info ul li{
+            list-style-type: none;
+            line-height: 2;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 5px;
+        }
+
+        #contact-info ul li img{
+            margin-right: 10px;
+        }
+
+        #contact-info ul li a{
+            text-decoration: none;
+        }
+
+        #contact-info ul li a:hover{
+            color: blue;
+        }
+
+        #top-container #contact-form{
+            width: 450px;
+            border: 1px solid #e2e2e2;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 5px #d9d9d9;
+            padding: 40px;
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+
+        #contact-form form div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input, select, textarea{
+            border: 1px solid #b8b8b8;
+            border-radius: 5px;
+            height: 30px;
+            padding: 5px 15px;
+            font-size: 15px;
+            box-sizing: inherit;
+            transition: all 0.4s;
+        }
+
+        ::-webkit-input-placeholder{
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus, textarea:focus{
+            outline: none;
+            box-shadow: 0px 0px 10px 1px rgb(170, 255, 113);
+            border: 1px solid rgb(162, 236, 162);
+        }
+
+        select{
+            background-color: white;
+        }
+
+        #description-container{
+            height: 100px;
+        }
+
+        #submit-btn{
+            width: 420px;
+            text-align: center;
+            color: white;
+            background-color: rgb(197, 0, 0);
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+
+        }
+
+        #submit-btn:hover{
+            background-color: rgb(155, 0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header id="nav-container">
+    <a class="nav-anchor" id="main-logo" href="">
+
+      <img src="Images/logo.jpg" alt="Logo Image" width="100px" height="50px">
+
+    </a>
+
+    <nav>
+      <a class="nav-anchor" href="#" id="study-abroad">Study Abroad <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></a>
+      <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
+      <a class="nav-anchor" href="about-us.html">About Us</a>
+      <a class="nav-anchor" href="services.html">Services</a>
+      <a class="nav-anchor" id="contact-btn" href="contact-us.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div id="study-abroad-hover">
+
+       <a class="country-container" href="australia-study.html">
+      <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+      Australia
+    </a>
+
+    <a class="country-container" href="canada-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+      Canada
+    </a>
+
+    <a class="country-container" href="japan-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
+      Japan
+    </a>
+
+    <a class="country-container" href="southkorea-study.html">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png" alt="">
+      South Korea
+    </a>
+
+    <a class="country-container" href="france-study.html">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
+      France
+    </a>
+
+ 
+
+    <a class="country-container" href="uk-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+      UK
+    </a>
+
+    <a class="country-container" href="usa-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+      USA
+    </a>
+
+    <a class="country-container" href="germany-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+      Germany
+    </a>
+
+  </div>
+
+
+  <main>
+
+    <section id="top-container">
+
+        <div id="info-regarding-contact" class="animate-this">
+
+            <h2>We'd love to <br><span class="red">hear from you!</span></h2>
+
+            <div id="p-info">
+                Whether you're looking for guidance on studying abroad or have a general question, we're happy to assist you and provide the right information. Simply fill out the form, and a member of our team will get in touch with you soon.
+            </div>
+
+            <div id="contact-info">
+
+                <ul>
+                    <li>
+                        <img src="Images/phone.svg" alt="Phone">
+                        <a href="#">+977 9800000000</a>,&nbsp;
+                         <a href="#">023-000000</a>
+                    </li>
+                    <li>
+                        <img src="Images/mail.svg" alt="mail">
+                        <a href="#">info@abroadbridge.com</a>
+                    </li>
+                    <li>
+                        <img src="Images/location.svg" alt="location">
+                        Abroad Bridge Consultancy, Birtamode, Jhapa, Nepal
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="social-medias">
+
+
+            </div>
+
+        </div>
+        <div id="contact-form" class="animate-this">
+
+            <form action="#">
+
+                <div>
+                    <label for="name-container">Name <span class="red">*</span></label>
+                    <input type="text" id="name-container" required placeholder="Enter your Name">
+                </div>
+
+                <div>
+                    <label for="email-container">Email <span class="red">*</span></label>
+                    <input type="email" id="email-container" required placeholder="Enter your E-mail">
+                </div>
+
+                <div>
+                    <label for="phone-container">Phone Number</label>
+                    <input type="number" id="phone-container" placeholder="Enter Phone Number">
+                </div>
+
+                <div>
+                    <label for="country-selector">Your Aim <span class="red">*</span></label>
+                    <select name="aimed-country" id="country-selector" required>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="japan">Japan</option>
+                        <option value="south-korea">South Korea</option>
+                        <option value="france">France</option>
+                        <option value="uk">UK</option>
+                        <option value="usa">USA</option>
+                        <option value="germany">Germany</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="address-container">Address</label>
+                    <input type="text" id="address-container" placeholder="Enter your Address">
+                </div>
+                
+                <div>
+                    <label for="description-container">Description</label>
+                    <textarea name="description" id="description-container" placeholder="Enter your Description"></textarea>
+                </div>
+
+                <input id="submit-btn" type="submit" value="Submit">
+
+            </form>
+
+
+
+        </div>
+
+    </section>
+
+
+  </main>
+
+<script src="nav-script.js"></script>
+    <script>
+
+        //Got it from chatgpt and modified it
+
+        // This script checks if the html element having class containg in "classes_to_animate" is shown on the screen or not
+        // If the element is not in the screen then nothing happens, but
+        // if the element was in the screen then it adds "animate-xxxx" class to the selected element
+        // This "animate-xxxx" class contains the respective animation
+
+        //Therefore if the element is shown in screen the animation is shown otherwise not shown
+
+        let classes_to_animate = [
+            ".animate-this"
+        ];
+        const animation_classes = [
+            "animate-slideFromLeft",
+        ];
+
+        const final_classes = classes_to_animate.join(", ");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    // Require the element to be at least 50% visible
+                    if (entry.intersectionRatio >= 0.25) {
+                        
+                        const selectedAnimation  = animation_classes[0]
+
+                        entry.target.classList.add(selectedAnimation);
+
+                        // stop observing once the animation is applied
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.25, 
+                rootMargin: "0px 0px -10% 0px" 
+            }
+        );
+
+        document.querySelectorAll(final_classes).forEach((el) => observer.observe(el));
+
+    </script>
+</body>
+</html>

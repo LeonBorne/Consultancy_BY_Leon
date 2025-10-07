@@ -71,6 +71,12 @@
             box-sizing: border-box;
         }
 
+        #image-overlay::selection{
+            background-color: #8affff;
+            color: black;
+        }
+
+    
         #image-overlay #main-heading{
             margin-top: 100px;
             font-size: 55px;
@@ -79,11 +85,17 @@
             color: white;
         }
 
+        #main-heading::selection{
+            color: rgb(240, 50, 50);
+        }
+
+
         #image-overlay #main-info{
             font-weight: 500;
             color: white;
             font-size: 23px;
         }
+
 
         #image-overlay #main-more-btn{
             padding: 10px 20px;
@@ -237,8 +249,6 @@
         }
 
 
-    
-
         
     </style>
 </head>
@@ -257,7 +267,7 @@
       <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
       <a class="nav-anchor" href="about-us.html">About Us</a>
       <a class="nav-anchor" href="services.html">Services</a>
-      <a class="nav-anchor" id="contact-form" href="contact-us.html">Contact Us</a>
+      <a class="nav-anchor" id="contact-btn" href="contact-us.html">Contact Us</a>
     </nav>
   </header>
 
@@ -321,7 +331,7 @@
                     </div>  
 
                     <div id="main-more-btn">
-                        <a href="#learn-more" id="learn-more-btn">Take me</a>
+                        <a href="#learn-more" id="learn-more-btn">Learn More</a>
                     </div>
 
                 </div>
