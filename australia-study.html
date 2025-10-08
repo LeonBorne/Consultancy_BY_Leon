@@ -7,250 +7,7 @@
     <title>Study in Australia</title>
     <link rel="stylesheet" href="nav-style.css">
     <link rel="stylesheet" href="animations.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: "Poppins", "Roboto", Arial, sans-serif;
-            color: #28333a;
-        }
-
-        span.red {
-            color: rgb(240, 50, 50);
-            font-family: inherit;
-        }
-
-        .top-info-section {
-            /* margin-top: 10px; */
-            /* margin-left: 10px; */
-            /* margin-right: 10px; */
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            gap: 20px;
-        }
-
-        #main-img-section {
-            width: 100vw;
-            height: 600px;
-            overflow: hidden;
-            align-self: center;
-            justify-self: center;
-            border-radius: 10px;
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
-        }
-
-        #main-img-section img {
-            width: 100vw;
-            height: 600px;
-            overflow: hidden;
-            object-fit: cover;
-            object-position: bottom;
-            border-radius: 10px;
-        }
-
-        #image-overlay {
-            position: absolute;
-            top: 80px;
-            width: 100vw;
-            height: 600px;
-            text-align: center;
-            padding-right: 200px;
-            padding-left: 200px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* justify-content: center; */
-            gap: 20px;
-
-            /* position: relative;
-            top: -470px;
-            left: 80px; */
-            background-color: rgba(0, 0, 0, 0.616);
-            box-sizing: border-box;
-        }
-
-        #image-overlay::selection{
-            background-color: #8affff;
-            color: black;
-        }
-
-    
-        #image-overlay #main-heading{
-            margin-top: 100px;
-            font-size: 55px;
-            font-weight: 800;
-            text-transform: capitalize;
-            color: white;
-        }
-
-        #main-heading::selection{
-            color: rgb(240, 50, 50);
-        }
-
-
-        #image-overlay #main-info{
-            font-weight: 500;
-            color: white;
-            font-size: 23px;
-        }
-
-
-        #image-overlay #main-more-btn{
-            padding: 10px 20px;
-            background-color: #38ac38;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-        }
-
-        #image-overlay #main-more-btn:hover{
-            background-color: #339e33;
-        }
-
-        #image-overlay #main-more-btn #learn-more-btn{
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        #y-study-section {
-            margin-top: 30px;
-            margin-right: 250px;
-            margin-left: 250px;
-        }
-
-        h2 {
-            color: rgb(14, 102, 143);
-            font-size: 40px;
-            font-family: "Roboto Condensed", "Poppins", Arial, sans-serif;
-            text-transform: capitalize;
-            margin-bottom: 10px;
-        }
-
-        #y-study-section ul {
-            line-height: 1.5;
-            word-spacing: 2px;
-        }
-
-        #y-study-section ul li {
-            margin: 5px;
-            list-style: outside;
-        }
-
-        .basic-info-section {
-            margin-top: 50px;
-            margin-bottom: 50px;
-            margin-left: 50px;
-            opacity: 0;
-        }
-
-
-        table {
-            margin: auto;
-            border: 1px solid rgb(148, 148, 148);
-            width: 90vw;
-            border-collapse: collapse;
-        }
-
-        table th {
-            background-color: #def1f5;
-            font-size: 1.05em;
-            font-weight: 600;
-        }
-        
-        
-        table td {
-            font-size: 1em;
-        }
-        
-        table th,
-        table td {
-            text-align: left;
-            border: 1px solid #e2e2e2;
-            padding: 10px;
-        }
-
-        table tr{
-            background-color: white;
-        }
-
-        table tr:nth-child(2n + 1),
-        table tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        .note {
-            border: 1px solid yellow;
-            background-color: #ffffac;
-            margin: 10px 60px;
-            font-size: 15px;
-            color: #3e3e3e;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .focus {
-            border: 1px solid #8fff8f;
-            background-color: #ceffce;
-            padding: 10px;
-            border-radius: 10px;
-            margin: 10px 60px;
-            font-size: 15px;
-        }
-
-        #step-process-list {
-            margin-left: 50px;
-            font-size: 1.05em;
-        }
-
-        #step-process-list li {
-            line-height: 1.6;
-            list-style-position: inside;
-        }
-
-        details {
-            margin-left: 50px;
-        }
-
-        summary {
-            cursor: pointer;
-        }
-
-        summary:hover {
-            text-decoration: underline;
-        }
-
-        ul.details-list {
-            margin-left: 70px;
-        }
-
-        #university-list{
-            margin-left: 70px;
-            margin-right: 300px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        #university-list ul li{
-            list-style-type: "➤   ";
-        }
-
-        #university-list ul li:hover{
-            text-decoration: underline;
-            text-decoration-color: blue;
-        }
-
-        #university-list ul li a{
-            color: blue;
-            text-decoration: none;
-        }
-
-
-        
-    </style>
+    <link rel="stylesheet" href="study-style.css">
 </head>
 
 <body>
@@ -274,45 +31,69 @@
   <div id="study-abroad-hover">
 
        <a class="country-container" href="australia-study.html">
-      <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
-      Australia
+        <div class="country-content">
+            <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+            Australia
+        </div>
+        <div class="underline"></div>
     </a>
 
     <a class="country-container" href="canada-study.html">
-      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
-      Canada
+        <div class="country-content">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+            Canada
+        </div>
+        <div class="underline"></div>
     </a>
 
     <a class="country-container" href="japan-study.html">
-      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
-      Japan
+        <div class="country-content">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
+            Japan
+        </div>
+        <div class="underline"></div>
     </a>
 
     <a class="country-container" href="southkorea-study.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png" alt="">
-      South Korea
+        <div class="country-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png" alt="">
+            South Korea
+        </div>
+        <div class="underline"></div>
     </a>
 
     <a class="country-container" href="france-study.html">
-      <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
-      France
+        <div class="country-content">
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
+            France
+        </div>
+        <div class="underline"></div>
     </a>
 
  
 
     <a class="country-container" href="uk-study.html">
-      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
-      UK
+        <div class="country-content">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+            UK
+        </div>
+        <div class="underline"></div>
     </a>
 
     <a class="country-container" href="usa-study.html">
-      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
-      USA
+        <div class="country-content">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+            USA
+        </div>
+        <div class="underline"></div>
     </a>
 
     <a class="country-container" href="germany-study.html">
-      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
-      Germany
+        <div class="country-content">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+            Germany
+        </div>
+        <div class="underline"></div>
     </a>
 
   </div>
@@ -607,6 +388,7 @@
         );
 
         document.querySelectorAll(final_classes).forEach((el) => observer.observe(el));
+
 
     </script>
 </body>

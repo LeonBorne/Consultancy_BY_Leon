@@ -104,6 +104,7 @@
             align-items: center;
             justify-content: flex-start;
             gap: 40px;
+            opacity: 0;
         }
 
         .info-container:nth-child(2n + 1) {
@@ -201,6 +202,8 @@
             border-top-left-radius: 20px;
             margin: 0;
             padding: 0;
+            object-fit: cover;
+            object-position: center;
         }
 
         #form-container {
@@ -214,19 +217,19 @@
             z-index: 15;
 
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-20px);
             pointer-events: none;
             transition: all 0.4s ease;
 
         }
 
-        #form-container.present{
+        #form-container.present {
             pointer-events: auto;
             opacity: 1;
             transform: translateY(0);
         }
 
-        #close-btn{
+        #close-btn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -239,12 +242,12 @@
             cursor: pointer;
 
             position: fixed;
-            top: 4vh;
-            left: 4vw;
+            top: 2.5vh;
+            left: 3.5vw;
             transition: background-color 0.2s ease;
         }
 
-        #close-btn:hover{
+        #close-btn:hover {
             background-color: rgb(197, 0, 0);
         }
 
@@ -261,6 +264,7 @@
             display: flex;
             flex-direction: row;
             gap: 20px;
+
         }
 
         .form-info {
@@ -280,7 +284,7 @@
         .form-info p {
             line-height: 1.4;
         }
-        
+
         form {
             min-width: 400px;
             overflow-y: auto;
@@ -360,7 +364,7 @@
             border-radius: 10px;
         }
 
-        .hidden{
+        .hidden {
             display: none !important;
         }
     </style>
@@ -391,46 +395,71 @@
     <div id="study-abroad-hover">
 
         <a class="country-container" href="australia-study.html">
-            <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
-            Australia
+            <div class="country-content">
+                <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+                Australia
+            </div>
+            <div class="underline"></div>
         </a>
 
         <a class="country-container" href="canada-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
-            Canada
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+                Canada
+            </div>
+            <div class="underline"></div>
         </a>
 
         <a class="country-container" href="japan-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
-            Japan
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp"
+                    alt="">
+                Japan
+            </div>
+            <div class="underline"></div>
         </a>
 
         <a class="country-container" href="southkorea-study.html">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png"
-                alt="">
-            South Korea
+            <div class="country-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png"
+                    alt="">
+                South Korea
+            </div>
+            <div class="underline"></div>
         </a>
 
         <a class="country-container" href="france-study.html">
-            <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
-            France
+            <div class="country-content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
+                France
+            </div>
+            <div class="underline"></div>
         </a>
 
 
 
         <a class="country-container" href="uk-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
-            UK
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+                UK
+            </div>
+            <div class="underline"></div>
         </a>
 
         <a class="country-container" href="usa-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
-            USA
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+                USA
+            </div>
+            <div class="underline"></div>
         </a>
 
         <a class="country-container" href="germany-study.html">
-            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
-            Germany
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+                Germany
+            </div>
+            <div class="underline"></div>
         </a>
 
     </div>
@@ -438,7 +467,7 @@
     <main>
 
         <section id="main-img-section">
-            <img src="Images/preparation-image.jpg" alt="Man studying/preparing image">
+            <img src="Images/preparation-img.jpg" alt="Man studying/preparing image">
             <div id="image-overlay">
                 <div id="main-heading">
                     <span style="color: rgb(14, 102, 143);">ABC</span> <span class="red">Preparation Classes</span>
@@ -547,7 +576,7 @@
         </section>
 
 
-        <section id="our-services">
+        <section id="our-services" class="our-services">
 
             <div>
                 <h2>Our Services</h2>
@@ -555,22 +584,22 @@
                 <div class="info" id="services-container">
 
                     <a class="service-box" id="ielts" onclick="showForm(event)">
-                        <img src="" alt="">
+                        <img src="Images/ielts-img.jpg" alt="Ielts preparation">
                         <h3>ILETS</h3>
                     </a>
 
                     <a class="service-box" id="pte" onclick="showForm(event)">
-                        <img src="" alt="">
+                        <img src="Images/pte-img.jpg" alt="Pte preparation">
                         <h3>PTE</h3>
                     </a>
 
                     <a id="sat" class="service-box" onclick="showForm(event)">
-                        <img src="" alt="">
+                        <img src="Images/sat-img.jpg" alt="">
                         <h3>SAT</h3>
                     </a>
 
                     <a id="gmat" class="service-box" onclick="showForm(event)">
-                        <img src="" alt="">
+                        <img src="Images/gmat-img.jpg" alt="">
                         <h3>GMAT</h3>
                     </a>
 
@@ -655,7 +684,7 @@
                 </div>
 
                 <div id="sat-form-info" class="form-info">
-                    
+
                     <div class="what-is-it">
                         <h3>What is SAT?</h3>
                         <p>
@@ -718,7 +747,7 @@
                 </div>
 
                 <div id="pte-form-info" class="form-info">
-                    
+
                     <div class="what-is-it">
                         <h3>What is PTE?</h3>
                         <p>
@@ -781,7 +810,7 @@
                 </div>
 
                 <div id="gmat-form-info" class="form-info">
-                    
+
                     <div class="what-is-it">
                         <h3>What is GMAT?</h3>
                         <p>
@@ -879,9 +908,9 @@
                         <input type="text" id="address-container" placeholder="Enter your Address">
                     </div>
 
-                    
+
                     <input id="submit-btn" type="submit" value="Submit">
-                    
+
                     <div class="note">
                         You'll get informed about your class schedule by the email or phone number you've provided us.
                     </div>
@@ -903,6 +932,7 @@
         const form_container = document.getElementById("form-container")
         const form_section = document.getElementById("form-section")
         const form = document.getElementById("form")
+        const close_btn = document.getElementById("close-btn")
 
         function showForm(e) {
 
@@ -931,8 +961,43 @@
 
         }
 
-        form_container.addEventListener("click", hideForm)
+        close_btn.addEventListener("click", hideForm)
 
+    </script>
+
+    <script>
+        let classes_to_animate = [
+            ".info-container",
+            ".our-services"
+        ];
+        const animation_classes = [
+            "animate-slideFromLeft",
+        ];
+
+        const final_classes = classes_to_animate.join(", ");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    // Require the element to be at least 50% visible
+                    if (entry.intersectionRatio >= 0.25) {
+
+                        const selectedAnimation = animation_classes[0]
+
+                        entry.target.classList.add(selectedAnimation);
+
+                        // stop observing once the animation is applied
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.25,
+                rootMargin: "0px 0px -10% 0px"
+            }
+        );
+
+        document.querySelectorAll(final_classes).forEach((el) => observer.observe(el));
     </script>
 </body>
 
