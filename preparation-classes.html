@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparation Classes</title>
+    <link rel="stylesheet" href="nav-style.css">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", "Roboto", Arial, sans-serif;
+            color: #28333a;
+        }
+
+        #main-img-section {
+            width: 100vw;
+            height: 300px;
+            overflow: hidden;
+            align-self: center;
+            justify-self: center;
+            border-radius: 10px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        #main-img-section img {
+            width: 100vw;
+            height: 300px;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: bottom;
+            border-radius: 10px;
+        }
+
+        #image-overlay {
+            position: absolute;
+            top: 80px;
+            width: 100vw;
+            height: 300px;
+            text-align: center;
+            padding-right: 200px;
+            padding-left: 200px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            gap: 20px;
+
+            /* position: relative;
+            top: -470px;
+            left: 80px; */
+            background-color: rgba(0, 0, 0, 0.616);
+            box-sizing: border-box;
+        }
+
+        #image-overlay::selection {
+            background-color: #8affff;
+            color: black;
+        }
+
+
+        #image-overlay #main-heading {
+            margin-top: 100px;
+            font-size: 55px;
+            font-weight: 800;
+            text-transform: capitalize;
+            color: white;
+        }
+
+
+        #image-overlay #main-info {
+            font-weight: 500;
+            color: white;
+            font-size: 23px;
+        }
+
+
+        #image-overlay #main-more-btn {
+            padding: 10px 20px;
+            background-color: #38ac38;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        #image-overlay #main-more-btn:hover {
+            background-color: #339e33;
+        }
+
+        #image-overlay #main-more-btn #learn-more-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .info-container,
+        #our-services {
+            margin: 30px 70px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        .info-container:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+        }
+
+        .info-container img {
+            width: 450px;
+            height: 350px;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 0px 0px 15px 1px rgb(194, 194, 194);
+        }
+
+        .info-container h2,
+        #our-services h2 {
+            color: rgb(14, 102, 143);
+            font-size: 40px;
+            font-family: "Roboto Condensed", "Poppins", Arial, sans-serif;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        div.info {
+            text-align: justify;
+            margin: 10px 0;
+        }
+
+        #our-offers {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0px;
+        }
+
+        #our-offers div {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* margin: 0 50px; */
+        }
+
+        #our-offers div ul li {
+            list-style-type: ">  ";
+            font-size: 18px;
+            line-height: 2;
+        }
+
+
+        #our-services {
+            display: block;
+
+        }
+
+        #services-container {
+
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            flex-wrap: wrap;
+
+        }
+
+        a.service-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 250px;
+            height: 220px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        a.service-box:hover {
+            box-shadow: -1px 1px 10px 1px rgb(199, 199, 199);
+        }
+
+        .service-box h3 {
+            font-weight: 600;
+            font-size: 24px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .service-box img {
+            width: 250px;
+            height: 150px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #form-container {
+            position: fixed;
+            top: 0px;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.507);
+            box-sizing: border-box;
+
+            z-index: 15;
+
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            transition: all 0.4s ease;
+
+        }
+
+        #form-container.present{
+            pointer-events: auto;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #close-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color: rgb(240, 50, 50);
+            color: white;
+            font-weight: 900;
+            cursor: pointer;
+
+            position: fixed;
+            top: 4vh;
+            left: 4vw;
+            transition: background-color 0.2s ease;
+        }
+
+        #close-btn:hover{
+            background-color: rgb(197, 0, 0);
+        }
+
+
+        #form-container section {
+            width: 90vw;
+            height: 90vh;
+            margin: 5vh 5vw;
+            border-radius: 20px;
+            padding: 50px;
+            background-color: beige;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .form-info {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+
+
+        .form-info h3 {
+            color: rgb(240, 50, 50);
+            font-family: "Poppins", Arial, Helvetica, sans-serif;
+            font-size: 27px;
+            margin-top: 10px;
+        }
+
+        .form-info p {
+            line-height: 1.4;
+        }
+        
+        form {
+            min-width: 400px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        form h2 {
+            font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        form div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            border: 1px solid #b8b8b8;
+            border-radius: 5px;
+            height: 30px;
+            padding: 5px 15px;
+            font-size: 15px;
+            box-sizing: inherit;
+            transition: all 0.4s;
+        }
+
+        ::-webkit-input-placeholder {
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0px 0px 10px 1px rgb(170, 255, 113);
+            border: 1px solid rgb(162, 236, 162);
+        }
+
+        select {
+            background-color: white;
+        }
+
+        #description-container {
+            height: 100px;
+        }
+
+        #submit-btn {
+            width: auto;
+            text-align: center;
+            color: white;
+            background-color: rgb(197, 0, 0);
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+
+        }
+
+        #submit-btn:hover {
+            background-color: rgb(155, 0, 0);
+        }
+
+
+        .note {
+            border: 1px solid yellow;
+            background-color: #ffffac;
+            margin: 10px 0;
+            font-size: 15px;
+            color: #3e3e3e;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .hidden{
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header id="nav-container">
+        <a class="nav-anchor" id="main-logo" href="">
+
+            <img src="Images/logo.jpg" alt="Logo Image" width="100px" height="50px">
+
+        </a>
+
+        <nav>
+            <a class="nav-anchor" href="#" id="study-abroad">Study Abroad <svg xmlns="http://www.w3.org/2000/svg"
+                    height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                </svg></a>
+            <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
+            <a class="nav-anchor" href="about-us.html">About Us</a>
+            <a class="nav-anchor" href="services.html">Services</a>
+            <a class="nav-anchor" id="contact-btn" href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div id="study-abroad-hover">
+
+        <a class="country-container" href="australia-study.html">
+            <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+            Australia
+        </a>
+
+        <a class="country-container" href="canada-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+            Canada
+        </a>
+
+        <a class="country-container" href="japan-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
+            Japan
+        </a>
+
+        <a class="country-container" href="southkorea-study.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png"
+                alt="">
+            South Korea
+        </a>
+
+        <a class="country-container" href="france-study.html">
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
+            France
+        </a>
+
+
+
+        <a class="country-container" href="uk-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+            UK
+        </a>
+
+        <a class="country-container" href="usa-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+            USA
+        </a>
+
+        <a class="country-container" href="germany-study.html">
+            <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+            Germany
+        </a>
+
+    </div>
+
+    <main>
+
+        <section id="main-img-section">
+            <img src="Images/preparation-image.jpg" alt="Man studying/preparing image">
+            <div id="image-overlay">
+                <div id="main-heading">
+                    <span style="color: rgb(14, 102, 143);">ABC</span> <span class="red">Preparation Classes</span>
+                </div>
+
+                <div id="main-info">
+                    Prepare for your dreams!
+                </div>
+            </div>
+        </section>
+
+        <section id="top-info" class="info-container">
+
+            <div>
+
+
+                <h2>Overview of ABC Preparation Classes</h2>
+
+                <div class="info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi asperiores impedit libero magnam
+                    soluta nisi nesciunt consequuntur velit ipsam blanditiis praesentium dolorem aliquid sapiente at
+                    magni
+                    fugit, ad beatae perspiciatis hic esse provident expedita cumque aspernatur veritatis. Impedit,
+                    inventore tempore. Doloremque distinctio quasi, tenetur voluptatibus, atque tempore quia, asperiores
+                    possimus quae adipisci architecto cumque minima perferendis aperiam laudantium ipsum soluta nobis
+                    eveniet harum voluptates dolorem nostrum? Quisquam cumque quia magni esse minus? Aperiam, vitae. Ea,
+                    quos quod commodi similique optio et modi soluta explicabo nostrum provident delectus officia ex.
+                    Deleniti alias a vitae soluta cum aliquam ipsa omnis. Sapiente sunt dicta corrupti officia nesciunt
+                    a
+                    natus similique reprehenderit deserunt possimus aliquam veritatis numquam est corporis
+                    exercitationem
+                    amet, ea omnis saepe nobis mollitia minus eum. Porro, voluptas. Praesentium expedita esse itaque
+                    soluta
+                    alias? Consequatur non at nobis unde ullam totam, cum est! Ipsum aperiam corporis dignissimos quo
+                    minima
+                    nihil! Dolores quae placeat consequatur a? Laudantium consectetur ea tenetur autem enim quae vel.
+                    Quam,
+                    iure repellat sequi, harum pariatur dolorum iusto rem, ut quasi possimus vitae tempore fugit ducimus
+                    nesciunt quae laudantium aliquid inventore mollitia a id esse quidem tempora. Culpa adipisci ad ab
+                    magni
+                    voluptates! Distinctio sed ipsa incidunt blanditiis soluta.
+                </div>
+
+            </div>
+
+            <img src="Images/australia-main-img.jpg" alt="prep-image-1">
+
+        </section>
+
+
+
+        <section id="more-info" class="info-container">
+
+            <div>
+
+                <h2>More Info</h2>
+
+                <div class="info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga soluta qui nemo sint magnam in
+                    explicabo cumque praesentium alias asperiores illum facilis, consequuntur laborum illo est sequi
+                    unde quos nobis cum ad voluptas quaerat? Nihil, modi quisquam magnam rerum, deserunt totam, eveniet
+                    mollitia aut iure molestiae ad quae illum neque doloremque minima commodi dicta placeat! Laudantium
+                    iure fugiat non ipsam, ratione recusandae illum vero nam aut adipisci doloribus quod eum, molestias
+                    tempore, quasi unde! Iure numquam a reiciendis rem tempore quod. Voluptate velit obcaecati sed
+                    consectetur necessitatibus ducimus maiores reprehenderit illo molestias a atque, ratione tempora
+                    labore dignissimos fugit perferendis unde temporibus repellendus aperiam molestiae, deleniti, ipsam
+                    inventore est. Natus sint quam voluptatibus excepturi corrupti, alias quaerat repellendus saepe
+                    fugit doloribus fugiat adipisci consequatur optio tempore similique? Eligendi, recusandae impedit
+                    repudiandae sit assumenda dolorum aperiam inventore, velit repellat est, voluptatum dicta officia
+                    debitis voluptate odio? Veniam tempora distinctio ipsam ullam.
+                </div>
+
+            </div>
+
+            <img src="Images/australia-main-img.jpg" alt="">
+        </section>
+
+
+        <section id="our-offers" class="info-container">
+
+
+            <h2>We Offer :</h2>
+
+            <div>
+                <ul>
+
+                    <li>Top-Rated Faculty with Expert Mentors</li>
+                    <li>Proven 8.0+ results</li>
+                    <li>Guaranteed 6+ success with personal attention</li>
+                    <li>Mock tests with real exam feel</li>
+                    <li>Fresh batches, flexible class timings and no delays</li>
+                    <li>Personalized Mentorship and Extra support for each learners</li>
+                </ul>
+
+                <ul>
+                    <li>Power-Packed Library</li>
+                    <li>Tailored and Free resources, made just for you</li>
+                    <li>Smart classrooms</li>
+                    <li>Parking Spaces and Free Wifi</li>
+
+                    <li style="text-decoration: underline;">Confidence that lasts beyond the test</li>
+
+                </ul>
+            </div>
+
+        </section>
+
+
+        <section id="our-services">
+
+            <div>
+                <h2>Our Services</h2>
+
+                <div class="info" id="services-container">
+
+                    <a class="service-box" id="ielts" onclick="showForm(event)">
+                        <img src="" alt="">
+                        <h3>ILETS</h3>
+                    </a>
+
+                    <a class="service-box" id="pte" onclick="showForm(event)">
+                        <img src="" alt="">
+                        <h3>PTE</h3>
+                    </a>
+
+                    <a id="sat" class="service-box" onclick="showForm(event)">
+                        <img src="" alt="">
+                        <h3>SAT</h3>
+                    </a>
+
+                    <a id="gmat" class="service-box" onclick="showForm(event)">
+                        <img src="" alt="">
+                        <h3>GMAT</h3>
+                    </a>
+
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <div id="form-container">
+
+            <div id="close-btn">X</div>
+
+            <section id="form-section">
+
+                <div id="ielts-form-info" class="form-info">
+
+                    <div class="what-is-it">
+                        <h3>What is ILETS?</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, illo magnam maiores nobis
+                            porro nemo delectus obcaecati fugiat dolor beatae quae ea asperiores sint? Omnis numquam
+                            dolorum molestiae eum eaque cumque odit soluta necessitatibus modi perspiciatis
+                            doloremque
+                            quis praesentium, temporibus totam ab quod nemo quidem assumenda. Sint officia pariatur
+                            molestias.
+                        </p>
+                    </div>
+
+                    <div class="who-is-it-for">
+                        <h3>Whom is it for?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatum ipsam
+                            molestias! Ducimus repudiandae, suscipit eum totam ullam repellat molestiae
+                            necessitatibus
+                            esse in. Obcaecati perferendis, ullam pariatur eos alias doloribus architecto ex veniam
+                            dicta omnis deleniti ipsam assumenda rem mollitia. Praesentium ipsam distinctio tempora
+                            obcaecati ipsa accusamus illo vitae ad.
+                        </p>
+                    </div>
+
+                    <div class="countries-accepting-it">
+                        <h3>Countries accepting ILETS</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vero, reprehenderit
+                            tempora
+                            reiciendis adipisci possimus aperiam modi facere harum delectus corporis repellat
+                            architecto
+                            odio? Natus ipsam sit ipsum animi quis!
+                        </p>
+                    </div>
+
+                    <div class="test-places">
+                        <h3>Where can I take the test?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus rem sit
+                            provident
+                            laboriosam quos placeat cumque. Expedita molestias repellat provident dignissimos!
+                            Possimus
+                            fugit illum et facilis laborum at ullam suscipit cumque similique, sint quae. Officiis
+                            possimus rem doloribus voluptas.
+                        </p>
+                    </div>
+
+                    <div class="cost">
+                        <h3>Cost for IELTS</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto voluptates
+                            voluptate
+                            optio aspernatur a, libero, animi fuga eos corporis eligendi! Repellendus nesciunt
+                            officiis
+                            voluptates laboriosam facere vitae quos ad velit dolor sint reiciendis excepturi, dolore
+                            vel
+                            porro? Repellendus, veniam animi beatae fuga officia et.
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <div id="sat-form-info" class="form-info">
+                    
+                    <div class="what-is-it">
+                        <h3>What is SAT?</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, illo magnam maiores nobis
+                            porro nemo delectus obcaecati fugiat dolor beatae quae ea asperiores sint? Omnis numquam
+                            dolorum molestiae eum eaque cumque odit soluta necessitatibus modi perspiciatis
+                            doloremque
+                            quis praesentium, temporibus totam ab quod nemo quidem assumenda. Sint officia pariatur
+                            molestias.
+                        </p>
+                    </div>
+
+                    <div class="who-is-it-for">
+                        <h3>Whom is it for?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatum ipsam
+                            molestias! Ducimus repudiandae, suscipit eum totam ullam repellat molestiae
+                            necessitatibus
+                            esse in. Obcaecati perferendis, ullam pariatur eos alias doloribus architecto ex veniam
+                            dicta omnis deleniti ipsam assumenda rem mollitia. Praesentium ipsam distinctio tempora
+                            obcaecati ipsa accusamus illo vitae ad.
+                        </p>
+                    </div>
+
+                    <div class="countries-accepting-it">
+                        <h3>Countries accepting SAR</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vero, reprehenderit
+                            tempora
+                            reiciendis adipisci possimus aperiam modi facere harum delectus corporis repellat
+                            architecto
+                            odio? Natus ipsam sit ipsum animi quis!
+                        </p>
+                    </div>
+
+                    <div class="test-places">
+                        <h3>Where can I take the test?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus rem sit
+                            provident
+                            laboriosam quos placeat cumque. Expedita molestias repellat provident dignissimos!
+                            Possimus
+                            fugit illum et facilis laborum at ullam suscipit cumque similique, sint quae. Officiis
+                            possimus rem doloribus voluptas.
+                        </p>
+                    </div>
+
+                    <div class="cost">
+                        <h3>Cost for SAT</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto voluptates
+                            voluptate
+                            optio aspernatur a, libero, animi fuga eos corporis eligendi! Repellendus nesciunt
+                            officiis
+                            voluptates laboriosam facere vitae quos ad velit dolor sint reiciendis excepturi, dolore
+                            vel
+                            porro? Repellendus, veniam animi beatae fuga officia et.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="pte-form-info" class="form-info">
+                    
+                    <div class="what-is-it">
+                        <h3>What is PTE?</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, illo magnam maiores nobis
+                            porro nemo delectus obcaecati fugiat dolor beatae quae ea asperiores sint? Omnis numquam
+                            dolorum molestiae eum eaque cumque odit soluta necessitatibus modi perspiciatis
+                            doloremque
+                            quis praesentium, temporibus totam ab quod nemo quidem assumenda. Sint officia pariatur
+                            molestias.
+                        </p>
+                    </div>
+
+                    <div class="who-is-it-for">
+                        <h3>Whom is it for?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatum ipsam
+                            molestias! Ducimus repudiandae, suscipit eum totam ullam repellat molestiae
+                            necessitatibus
+                            esse in. Obcaecati perferendis, ullam pariatur eos alias doloribus architecto ex veniam
+                            dicta omnis deleniti ipsam assumenda rem mollitia. Praesentium ipsam distinctio tempora
+                            obcaecati ipsa accusamus illo vitae ad.
+                        </p>
+                    </div>
+
+                    <div class="countries-accepting-it">
+                        <h3>Countries accepting PTE</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vero, reprehenderit
+                            tempora
+                            reiciendis adipisci possimus aperiam modi facere harum delectus corporis repellat
+                            architecto
+                            odio? Natus ipsam sit ipsum animi quis!
+                        </p>
+                    </div>
+
+                    <div class="test-places">
+                        <h3>Where can I take the test?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus rem sit
+                            provident
+                            laboriosam quos placeat cumque. Expedita molestias repellat provident dignissimos!
+                            Possimus
+                            fugit illum et facilis laborum at ullam suscipit cumque similique, sint quae. Officiis
+                            possimus rem doloribus voluptas.
+                        </p>
+                    </div>
+
+                    <div class="cost">
+                        <h3>Cost for PTE</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto voluptates
+                            voluptate
+                            optio aspernatur a, libero, animi fuga eos corporis eligendi! Repellendus nesciunt
+                            officiis
+                            voluptates laboriosam facere vitae quos ad velit dolor sint reiciendis excepturi, dolore
+                            vel
+                            porro? Repellendus, veniam animi beatae fuga officia et.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="gmat-form-info" class="form-info">
+                    
+                    <div class="what-is-it">
+                        <h3>What is GMAT?</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, illo magnam maiores nobis
+                            porro nemo delectus obcaecati fugiat dolor beatae quae ea asperiores sint? Omnis numquam
+                            dolorum molestiae eum eaque cumque odit soluta necessitatibus modi perspiciatis
+                            doloremque
+                            quis praesentium, temporibus totam ab quod nemo quidem assumenda. Sint officia pariatur
+                            molestias.
+                        </p>
+                    </div>
+
+                    <div class="who-is-it-for">
+                        <h3>Whom is it for?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatum ipsam
+                            molestias! Ducimus repudiandae, suscipit eum totam ullam repellat molestiae
+                            necessitatibus
+                            esse in. Obcaecati perferendis, ullam pariatur eos alias doloribus architecto ex veniam
+                            dicta omnis deleniti ipsam assumenda rem mollitia. Praesentium ipsam distinctio tempora
+                            obcaecati ipsa accusamus illo vitae ad.
+                        </p>
+                    </div>
+
+                    <div class="countries-accepting-it">
+                        <h3>Countries accepting GMAT</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vero, reprehenderit
+                            tempora
+                            reiciendis adipisci possimus aperiam modi facere harum delectus corporis repellat
+                            architecto
+                            odio? Natus ipsam sit ipsum animi quis!
+                        </p>
+                    </div>
+
+                    <div class="test-places">
+                        <h3>Where can I take the test?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus rem sit
+                            provident
+                            laboriosam quos placeat cumque. Expedita molestias repellat provident dignissimos!
+                            Possimus
+                            fugit illum et facilis laborum at ullam suscipit cumque similique, sint quae. Officiis
+                            possimus rem doloribus voluptas.
+                        </p>
+                    </div>
+
+                    <div class="cost">
+                        <h3>Cost for GMAT</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto voluptates
+                            voluptate
+                            optio aspernatur a, libero, animi fuga eos corporis eligendi! Repellendus nesciunt
+                            officiis
+                            voluptates laboriosam facere vitae quos ad velit dolor sint reiciendis excepturi, dolore
+                            vel
+                            porro? Repellendus, veniam animi beatae fuga officia et.
+                        </p>
+                    </div>
+                </div>
+
+
+                <form action="#" id="form" class="form hidden">
+
+                    <h2 id="form-heading-enroll-now"><span class="red">Enroll Now!</span></h2>
+
+                    <div>
+                        <label for="name-container">Name <span class="red">*</span></label>
+                        <input type="text" id="name-container" required placeholder="Enter your Name">
+                    </div>
+
+                    <div>
+                        <label for="email-container">Email <span class="red">*</span></label>
+                        <input type="email" id="email-container" required placeholder="Enter your E-mail">
+                    </div>
+
+                    <div>
+                        <label for="phone-container">Phone Number</label>
+                        <input type="number" id="phone-container" placeholder="Enter Phone Number">
+                    </div>
+
+                    <div>
+                        <label for="class-selector">Class type <span class="red">*</span></label>
+                        <select name="aimed-country" id="class-selector" required>
+                            <option value="ielts">IELTS</option>
+                            <option value="pte">PTE</option>
+                            <option value="sat">SAT</option>
+                            <option value="gmat">GMAT</option>
+
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="address-container">Address</label>
+                        <input type="text" id="address-container" placeholder="Enter your Address">
+                    </div>
+
+                    
+                    <input id="submit-btn" type="submit" value="Submit">
+                    
+                    <div class="note">
+                        You'll get informed about your class schedule by the email or phone number you've provided us.
+                    </div>
+                </form>
+
+            </section>
+
+
+
+        </div>
+
+    </main>
+
+
+
+    <script src="nav-script.js"></script>
+
+    <script>
+        const form_container = document.getElementById("form-container")
+        const form_section = document.getElementById("form-section")
+        const form = document.getElementById("form")
+
+        function showForm(e) {
+
+            const event_caller = e.currentTarget.id
+            const form_info = document.getElementById(event_caller + "-form-info")
+
+            hideForm()
+
+
+            form_container.classList.add("present")
+            form_info.classList.remove("hidden")
+            form.classList.remove("hidden")
+
+        }
+
+        function hideForm() {
+
+            form_container.classList.remove("present")
+
+            form_info_array = Array.from(form_section.children)
+
+            for (let i = 0; i < form_info_array.length; i++) {
+                const element = form_info_array[i];
+                element.classList.add("hidden")
+            }
+
+        }
+
+        form_container.addEventListener("click", hideForm)
+
+    </script>
+</body>
+
+</html>

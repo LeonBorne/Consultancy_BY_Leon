@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in Canada</title>
+    <link rel="stylesheet" href="nav-style.css">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", "Roboto", Arial, sans-serif;
+            color: #28333a;
+        }
+
+        .top-info-section {
+            /* margin-top: 10px; */
+            /* margin-left: 10px; */
+            /* margin-right: 10px; */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+
+        #main-img-section {
+            width: 100vw;
+            height: 600px;
+            overflow: hidden;
+            align-self: center;
+            justify-self: center;
+            border-radius: 10px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        #main-img-section img {
+            width: 100vw;
+            height: 600px;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: bottom;
+            border-radius: 10px;
+        }
+
+        #image-overlay {
+            position: absolute;
+            top: 80px;
+            width: 100vw;
+            height: 600px;
+            text-align: center;
+            padding-right: 200px;
+            padding-left: 200px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            gap: 20px;
+
+            /* position: relative;
+            top: -470px;
+            left: 80px; */
+            background-color: rgba(0, 0, 0, 0.616);
+            box-sizing: border-box;
+        }
+
+        #image-overlay::selection{
+            background-color: #8affff;
+            color: black;
+        }
+
+    
+        #image-overlay #main-heading{
+            margin-top: 100px;
+            font-size: 55px;
+            font-weight: 800;
+            text-transform: capitalize;
+            color: white;
+        }
+
+        #main-heading::selection{
+            color: rgb(240, 50, 50);
+        }
+
+
+        #image-overlay #main-info{
+            font-weight: 500;
+            color: white;
+            font-size: 23px;
+        }
+
+
+        #image-overlay #main-more-btn{
+            padding: 10px 20px;
+            background-color: #38ac38;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        #image-overlay #main-more-btn:hover{
+            background-color: #339e33;
+        }
+
+        #image-overlay #main-more-btn #learn-more-btn{
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        #y-study-section {
+            margin-top: 30px;
+            margin-right: 250px;
+            margin-left: 250px;
+        }
+
+        h2 {
+            color: rgb(14, 102, 143);
+            font-size: 40px;
+            font-family: "Roboto Condensed", "Poppins", Arial, sans-serif;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        #y-study-section ul {
+            line-height: 1.5;
+            word-spacing: 2px;
+        }
+
+        #y-study-section ul li {
+            margin: 5px;
+            list-style: outside;
+        }
+
+        .basic-info-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            opacity: 0;
+        }
+
+
+        table {
+            margin: auto;
+            border: 1px solid rgb(148, 148, 148);
+            width: 90vw;
+            border-collapse: collapse;
+        }
+
+        table th {
+            background-color: #def1f5;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+        
+        
+        table td {
+            font-size: 1em;
+        }
+        
+        table th,
+        table td {
+            text-align: left;
+            border: 1px solid #e2e2e2;
+            padding: 10px;
+        }
+
+        table tr{
+            background-color: white;
+        }
+
+        table tr:nth-child(2n + 1),
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .note {
+            border: 1px solid yellow;
+            background-color: #ffffac;
+            margin: 10px 60px;
+            font-size: 15px;
+            color: #3e3e3e;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .focus {
+            border: 1px solid #8fff8f;
+            background-color: #ceffce;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 60px;
+            font-size: 15px;
+        }
+
+        #step-process-list {
+            margin-left: 50px;
+            font-size: 1.05em;
+        }
+
+        #step-process-list li {
+            line-height: 1.6;
+            list-style-position: inside;
+        }
+
+        details {
+            margin-left: 50px;
+        }
+
+        summary {
+            cursor: pointer;
+        }
+
+        summary:hover {
+            text-decoration: underline;
+        }
+
+        ul.details-list {
+            margin-left: 70px;
+        }
+
+        #university-list{
+            margin-left: 70px;
+            margin-right: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #university-list ul li{
+            list-style-type: "➤   ";
+        }
+
+        #university-list ul li:hover{
+            text-decoration: underline;
+            text-decoration-color: blue;
+        }
+
+        #university-list ul li a{
+            color: blue;
+            text-decoration: none;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+
+    <header id="nav-container">
+    <a class="nav-anchor" id="main-logo" href="">
+
+      <img src="Images/logo.jpg" alt="Logo Image" width="100px" height="50px">
+
+    </a>
+
+    <nav>
+      <a class="nav-anchor" href="#" id="study-abroad">Study Abroad <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></a>
+      <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
+      <a class="nav-anchor" href="about-us.html">About Us</a>
+      <a class="nav-anchor" href="services.html">Services</a>
+      <a class="nav-anchor" id="contact-btn" href="contact-us.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div id="study-abroad-hover">
+
+       <a class="country-container" href="australia-study.html">
+      <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+      Australia
+    </a>
+
+    <a class="country-container" href="canada-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+      Canada
+    </a>
+
+    <a class="country-container" href="japan-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
+      Japan
+    </a>
+
+    <a class="country-container" href="southkorea-study.html">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png" alt="">
+      South Korea
+    </a>
+
+    <a class="country-container" href="france-study.html">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
+      France
+    </a>
+
+ 
+
+    <a class="country-container" href="uk-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+      UK
+    </a>
+
+    <a class="country-container" href="usa-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+      USA
+    </a>
+
+    <a class="country-container" href="germany-study.html">
+      <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+      Germany
+    </a>
+
+  </div>
+
+    <main>
+        <div class="top-info-section">
+            <section id="main-img-section">
+                <img src="Images/canada-main-img.jpg" alt="Canada Image">
+                <div id="image-overlay">
+                    <div id="main-heading">
+                        Study in <span class="red">Canada from Nepal</span>
+                    </div>
+
+                    <div id="main-info">
+                      If you seek a diverse culture, top-quality education, and breathtaking landscapes, Canada is the perfect destination for your studies. Known for its welcoming attitude and strong emphasis on education, Canada offers international students a unique and enriching experience.
+                    </div>  
+
+                    <div id="main-more-btn">
+                        <a href="#learn-more" id="learn-more-btn">Learn More</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <div id="learn-more" style="opacity: 0; height: 50px;"></div>
+
+            <section id="y-study-section">
+
+                <h2>Why study in <span class="red">Canada?</span></h2>
+
+                <ul>
+                    <li>Canada consistently ranks as one of the best countries for quality of life, making it an attractive destination for Nepali students seeking an excellent education.</li>
+                    <li>The country is home to world-renowned universities and colleges that offer a wide range of programs tailored to meet global market demands.</li>
+                    <li>Tuition fees in Canada are competitive compared to other countries, combined with opportunities for scholarships and financial aid for international students.</li>
+                    <li>Canada’s multicultural society provides a safe and inclusive environment, allowing students from various backgrounds to feel at home.</li>
+                    <li>Canadian degrees are recognized worldwide, greatly enhancing your employability and career prospects post-graduation.</li>
+                    <li>The emphasis on research and hands-on learning ensures that you gain applicable skills and experience</li>
+                    <li>With a focus on student well-being, universities in Canada offer comprehensive support services, including counseling and academic resources.</li>
+
+                </ul>
+
+            </section>
+        </div>
+
+
+        <section id="requirements-section" class="basic-info-section">
+            <h2>English Requirements <span class="red">to Study in Canada</span></h2>
+
+           <table>
+    <tr>
+        <th>Level</th>
+        <th>Academic</th>
+        <th>IELTS / PTE (typical)</th>
+    </tr>
+    <tr>
+        <td>Bachelor</td>
+        <td>Minimum GPA 2.0 (varies by university & course)</td>
+        <td>IELTS 6.5 (no band &lt; 6.0) / PTE 54</td>
+    </tr>
+    <tr>
+        <td>Master</td>
+        <td>Minimum GPA 2.7 with relevant background</td>
+        <td>IELTS 6.5 (no band &lt; 6.0) / PTE 58 (no band &lt; 56)</td>
+    </tr>
+</table>
+<div class="note">
+    ⚠️ Requirements vary depending on the university and program. Always verify with the official provider. Check our <a href="preparation-classes.html" style="color: blue;">IELTS/PTE Preparation page</a> for more info.
+</div>
+
+
+        </section>
+
+        <section id="cost-budget-section" class="basic-info-section">
+            <h2>Typical Costs <span class="red"> & Budget</span></h2>
+
+          <table>
+    <tr>
+        <th>Item</th>
+        <th>Estimated Amount</th>
+    </tr>
+    <tr>
+        <td>Tuition (per year)</td>
+        <td>CAD 20,000 - 30,000</td>
+    </tr>
+    <tr>
+        <td>Living Costs (per year)</td>
+        <td>CAD 15,000 - 20,000</td>
+    </tr>
+    <tr>
+        <td>Health Insurance </td>
+        <td>CAD 600 - 800 per year</td>
+    </tr>
+    <tr>
+        <td>Visa Application Fee</td>
+        <td>CAD 150</td>
+    </tr>
+</table>
+<div class="note">
+    Note: Costs depend on your lifestyle, location, and chosen institution.
+</div>
+        </section>
+
+
+        <section id="step-process-section" class="basic-info-section">
+            <h2>Study in Canada : <span class="red">Step By Step Process</span></h2>
+
+         <ol id="step-process-list">
+    <li>Shortlist your preferred course and university</li>
+    <li>Prepare academic documents and take English proficiency tests (IELTS/PTE)</li>
+    <li>Submit your application and wait for the offer letter</li>
+    <li>Arrange funds and pay initial fees to receive a Letter of Acceptance (LoA)</li>
+    <li>Complete medical examinations and obtain health insurance</li>
+    <li>Submit your study permit application and wait for approval</li>
+    <li>Prepare for departure: accommodation, flights, and orientation</li>
+</ol>
+<div class="focus">
+    Abroad Bridge Consultancy offers assistance at every stage — from choosing the right course to visa approval.
+</div>
+        </section>
+
+
+        <section id="document-section" class="basic-info-section">
+            <h2>Document Checklist</h2>
+
+           <details>
+    <summary>Offer Level Documents</summary>
+    <ul class="details-list">
+        <li>Academic certificates & transcripts</li>
+        <li>Passport</li>
+        <li>English proficiency test results</li>
+    </ul>
+</details>
+<details>
+    <summary>Financial Documents</summary>
+    <ul class="details-list">
+        <li>Proof of sufficient funds</li>
+        <li>Bank statements</li>
+        <li>Loan Documents</li>
+    </ul>
+</details>
+<details>
+    <summary>Health & Character Documents</summary>
+    <ul class="details-list">
+        <li>Health examination results</li>
+        <li>Police clearance certificate</li>
+    </ul>
+</details>
+<div class="note">
+    ⚠️ Always verify with the <a href="#" style="color: blue;">Canadian High Commission</a> or official university websites, as requirements may change.
+</div>
+
+        </section>
+
+        <section id="scholarship-section" class="basic-info-section">
+
+            <h2>Scholarships, Rights <span class="red">& Post-Study Work</span></h2>
+
+           <details>
+    <summary>
+        Various merit-based scholarships are available from universities and government programs.
+    </summary>
+</details>
+<details>
+    <summary>
+        Work while studying (up to 20 hours per week during terms).
+    </summary>
+</details>
+<details>
+    <summary>
+        Post-study work permit allows you to work in Canada for a duration equal to your study program, up to three years.
+    </summary>
+</details>
+
+        </section>
+
+
+        <section id="popular-universities-section" class="basic-info-section">
+            <h2>Popular Universities <span class="red">in Australia</span></h2>
+
+          <div id="university-list">
+    <ul>
+        <li><a href="">University of Toronto</a></li>
+        <li><a href="">University of British Columbia</a></li>
+        <li><a href="">McGill University</a></li>
+    </ul>
+    <ul>
+        <li><a href="">University of Alberta</a></li>
+        <li><a href="">Simon Fraser University</a></li>
+        <li><a href="">University of Ottawa</a></li>
+    </ul>
+</div>
+        </section>
+
+    </main>
+
+
+
+    <script src="nav-script.js"></script>
+    <script>
+
+        //Got it from chatgpt and modified it
+
+        // This script checks if the html element having class containg in "classes_to_animate" is shown on the screen or not
+        // If the element is not in the screen then nothing happens, but
+        // if the element was in the screen then it adds "animate-xxxx" class to the selected element
+        // This "animate-xxxx" class contains the respective animation
+
+        //Therefore if the element is shown in screen the animation is shown otherwise not shown
+
+        let classes_to_animate = [
+            ".basic-info-section"
+        ];
+        const animation_classes = [
+            "animate-slideFromLeft",
+        ];
+
+        const final_classes = classes_to_animate.join(", ");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    // Require the element to be at least 50% visible
+                    if (entry.intersectionRatio >= 0.25) {
+                        
+                        const selectedAnimation  = animation_classes[0]
+
+                        entry.target.classList.add(selectedAnimation);
+
+                        // stop observing once the animation is applied
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.25, 
+                rootMargin: "0px 0px -10% 0px" 
+            }
+        );
+
+        document.querySelectorAll(final_classes).forEach((el) => observer.observe(el));
+
+    </script>
+</body>
+
+</html>
