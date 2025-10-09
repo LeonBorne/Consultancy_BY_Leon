@@ -26,7 +26,7 @@
                 </svg></a>
             <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
             <a class="nav-anchor" href="about-us.html">About Us</a>
-            <a class="nav-anchor" href="services.html">Services</a>
+            <a class="nav-anchor" href="preparation-classes.html#our-services">Services</a>
             <a class="nav-anchor" id="contact-btn" href="contact-us.html">Contact Us</a>
         </nav>
     </header>
@@ -128,7 +128,7 @@
 
             <div id="learn-more" style="opacity: 0; height: 50px;"></div>
 
-            <section id="y-study-section">
+            <section id="y-study-section" class="animatable">
 
                 <h2>Why study in <span class="red">Germany?</span></h2>
 
@@ -155,7 +155,7 @@
         </div>
 
 
-        <section id="requirements-section" class="basic-info-section">
+        <section id="requirements-section" class="basic-info-section animatable">
             <h2>English Requirements <span class="red">to Study in Germany</span></h2>
 
             <table>
@@ -183,7 +183,7 @@
 
         </section>
 
-        <section id="cost-budget-section" class="basic-info-section">
+        <section id="cost-budget-section" class="basic-info-section animatable">
             <h2>Typical Costs <span class="red"> & Budget</span></h2>
 
             <table>
@@ -216,10 +216,10 @@
         </section>
 
 
-        <section id="step-process-section" class="basic-info-section">
+        <section id="step-process-section" class="basic-info-section animatable">
             <h2>Study in Germany : <span class="red">Step By Step Process</span></h2>
 
-            <ol id="step-process-list">
+            <ol id="step-process-list" class="animatable">
                 <li>Research and shortlist your desired course and university.</li>
                 <li>Prepare academic documents and take English proficiency tests (IELTS/PTE).</li>
                 <li>Submit your application and wait for the admission decision.</li>
@@ -234,7 +234,7 @@
         </section>
 
 
-        <section id="document-section" class="basic-info-section">
+        <section id="document-section" class="basic-info-section animatable">
             <h2>Document Checklist</h2>
             <details>
                 <summary>Offer Level Documents</summary>
@@ -268,7 +268,7 @@
 
         </section>
 
-        <section id="scholarship-section" class="basic-info-section">
+        <section id="scholarship-section" class="basic-info-section animatable">
 
             <h2>Scholarships, Rights <span class="red">& Post-Study Work</span></h2>
 
@@ -293,10 +293,10 @@
         </section>
 
 
-        <section id="popular-universities-section" class="basic-info-section">
+        <section id="popular-universities-section" class="basic-info-section animatable">
             <h2>Popular Universities <span class="red">in Germany</span></h2>
 
-            <div id="university-list">
+            <div id="university-list" class="animatable">
                 <ul>
                     <li><a href="">Technical University of Munich (TUM)</a></li>
                     <li><a href="">Ludwig Maximilian University of Munich (LMU)</a></li>
@@ -316,50 +316,7 @@
 
 
     <script src="nav-script.js"></script>
-    <script>
-
-        //Got it from chatgpt and modified it
-
-        // This script checks if the html element having class containg in "classes_to_animate" is shown on the screen or not
-        // If the element is not in the screen then nothing happens, but
-        // if the element was in the screen then it adds "animate-xxxx" class to the selected element
-        // This "animate-xxxx" class contains the respective animation
-
-        //Therefore if the element is shown in screen the animation is shown otherwise not shown
-
-        let classes_to_animate = [
-            ".basic-info-section"
-        ];
-        const animation_classes = [
-            "animate-slideFromLeft",
-        ];
-
-        const final_classes = classes_to_animate.join(", ");
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    // Require the element to be at least 50% visible
-                    if (entry.intersectionRatio >= 0.25) {
-
-                        const selectedAnimation = animation_classes[0]
-
-                        entry.target.classList.add(selectedAnimation);
-
-                        // stop observing once the animation is applied
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0.25,
-                rootMargin: "0px 0px -10% 0px"
-            }
-        );
-
-        document.querySelectorAll(final_classes).forEach((el) => observer.observe(el));
-
-    </script>
+    <script src="animation-script.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abroad Bridge Consultancy</title>
   <link rel="stylesheet" href="nav-style.css">
+  <link rel="stylesheet" href="animations.css">
   <style>
     /* Font Import */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -44,6 +45,7 @@
       line-height: 1.5;
       text-align: center;
       font-family: "Roboto Condensed", sans-serif;
+      animation-delay: 0.3s;
 
     }
 
@@ -57,7 +59,9 @@
       padding: 10px 100px;
       font-size: 19px;
       color: #2c2c2c;
+      animation-delay: 0.5s;
     }
+
 
     #main-img img {
       width: 400px;
@@ -82,7 +86,7 @@
         </svg></a>
       <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
       <a class="nav-anchor" href="about-us.html">About Us</a>
-      <a class="nav-anchor" href="services.html">Services</a>
+      <a class="nav-anchor" href="preparation-classes.html#our-services">Services</a>
       <a class="nav-anchor" id="contact-btn" href="contact-us.html">Contact Us</a>
     </nav>
   </header>
@@ -163,15 +167,15 @@
 
   <main class="main-container">
 
-    <section id="main-text">
+    <section id="main-text" class="animatable">
 
-      <h2>We <span class="red">simplify</span> global education and <span class="red">career</span> opportunities</h2>
-      <p>At Abroad Bridge Consultancy, we believe every student deserves the <br>chance to reach their academic and
+      <h2 class="animatable">We <span class="red">simplify</span> global education and <span class="red">career</span> opportunities</h2>
+      <p class="animatable">At Abroad Bridge Consultancy, we believe every student deserves the <br>chance to reach their academic and
         professional dreams</p>
 
     </section>
 
-    <section id="main-img">
+    <section id="main-img" class="animatable">
       <img src="" alt="">
     </section>
 
@@ -180,6 +184,7 @@
   </main>
 
   <script src="nav-script.js"></script>
+  <script src="animation-script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="nav-style.css">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", "Roboto", Arial, sans-serif;
+            color: #28333a;
+        }
+
+        .top-info-section {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+
+        #main-img-section {
+            width: 100vw;
+            height: 575px;
+            overflow: hidden;
+            align-self: center;
+            justify-self: center;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        #main-img-section img {
+            width: 100vw;
+            height: 575px;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        #image-overlay {
+            position: absolute;
+            top: 80px;
+            width: 100vw;
+            height: 575px;
+            text-align: center;
+            padding-right: 200px;
+            padding-left: 200px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            background-color: rgba(0, 0, 0, 0.616);
+            box-sizing: border-box;
+        }
+
+        #image-overlay::selection {
+            background-color: #8affff;
+            color: black;
+        }
+
+
+        #image-overlay #main-heading {
+            margin-top: 100px;
+            font-size: 55px;
+            font-weight: 800;
+            text-transform: capitalize;
+            color: white;
+        }
+
+        #main-heading::selection {
+            color: rgb(240, 50, 50);
+        }
+
+
+        #image-overlay #main-info {
+            font-weight: 500;
+            color: white;
+            font-size: 23px;
+        }
+
+
+        .info-container,
+        #our-services {
+            margin: 30px 150px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+            opacity: 0;
+        }
+
+        .info-container:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+        }
+
+        .info-container img {
+            width: 350px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 0px 0px 15px 1px rgb(194, 194, 194);
+        }
+
+        .info-container h2,
+        #our-services h2 {
+            color: rgb(14, 102, 143);
+            font-size: 40px;
+            font-family: "Roboto Condensed", "Poppins", Arial, sans-serif;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        div.info {
+            text-align: justify;
+            margin: 10px 0;
+        }
+
+
+        #key-services,
+        #choose-us {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0px;
+        }
+
+        #key-services ul,
+        #choose-us ul {
+            width: 100%;
+            margin: 0 50px;
+        }
+
+        #key-services ul li,
+        #choose-us ul li {
+            list-style-type: ">  ";
+            font-size: 18px;
+            line-height: 2;
+        }
+
+
+        .focus {
+            border: 1px solid #8fff8f;
+            background-color: #ceffce;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 60px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        #contact-info {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #contact-info ul li {
+            list-style-type: none;
+            line-height: 2;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 5px;
+        }
+
+        #contact-info ul li img {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+            box-shadow: none;
+        }
+
+        #contact-info ul li a {
+            text-decoration: none;
+        }
+
+        #contact-info ul li a:hover {
+            color: blue;
+        }
+
+        .contact-now-button {
+            /* margin-top: 20px; */
+            color: rgb(251, 236, 236);
+            background-color: rgb(224, 0, 0);
+            font-weight: 600;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            max-width: 180px;
+        }
+
+        .contact-now-button:hover{
+            background-color: rgb(185, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="nav-container">
+        <a class="nav-anchor" id="main-logo" href="">
+
+            <img src="Images/logo.jpg" alt="Logo Image" width="100px" height="50px">
+
+        </a>
+
+        <nav>
+            <a class="nav-anchor" href="#" id="study-abroad">Study Abroad <svg xmlns="http://www.w3.org/2000/svg"
+                    height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                </svg></a>
+            <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
+            <a class="nav-anchor" href="about-us.html">About Us</a>
+            <a class="nav-anchor" href="preparation-classes.html#our-services">Services</a>
+            <a class="nav-anchor" id="contact-btn" href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div id="study-abroad-hover">
+
+        <a class="country-container" href="australia-study.html">
+            <div class="country-content">
+                <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+                Australia
+            </div>
+            <div class="underline"></div>
+        </a>
+
+        <a class="country-container" href="canada-study.html">
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+                Canada
+            </div>
+            <div class="underline"></div>
+        </a>
+
+        <a class="country-container" href="japan-study.html">
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp"
+                    alt="">
+                Japan
+            </div>
+            <div class="underline"></div>
+        </a>
+
+        <a class="country-container" href="southkorea-study.html">
+            <div class="country-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png"
+                    alt="">
+                South Korea
+            </div>
+            <div class="underline"></div>
+        </a>
+
+        <a class="country-container" href="france-study.html">
+            <div class="country-content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
+                France
+            </div>
+            <div class="underline"></div>
+        </a>
+
+
+
+        <a class="country-container" href="uk-study.html">
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+                UK
+            </div>
+            <div class="underline"></div>
+        </a>
+
+        <a class="country-container" href="usa-study.html">
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+                USA
+            </div>
+            <div class="underline"></div>
+        </a>
+
+        <a class="country-container" href="germany-study.html">
+            <div class="country-content">
+                <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+                Germany
+            </div>
+            <div class="underline"></div>
+        </a>
+
+    </div>
+
+
+    <main>
+
+        <section id="main-img-section">
+            <img src="Images/preparation-img.jpg" alt="Man studying/preparing image">
+            <div id="image-overlay">
+                <div id="main-heading">
+                    <span style="color: rgb(14, 102, 143);">About Us</span> <br> <span class="red">Abroad Bridge
+                        Consultancy</span>
+                </div>
+
+                <div id="main-info">
+                    At Abroad Bridge Consultancy, we believe dreams of studying abroad shouldn't be limited by
+                    geography. Founded in 20XX, our mission is simple: to help Nepali students build bright futures
+                    through quality education overseas.
+                </div>
+            </div>
+        </section>
+
+        <section id="top-info" class="info-container animatable">
+
+            <div>
+
+
+                <h2>Who We Are?</h2>
+
+                <div class="info">
+                    Welcome to Abroad Bridge Consultancy, your trusted companion for global education and career
+                    guidance. We are a dedicated team of counselors and mentors who help students explore, prepare, and
+                    study in some of the best universities across the world. Our purpose is simple — to make
+                    international education accessible, affordable, and achievable for every ambitious student.
+                </div>
+
+            </div>
+
+            <img src="Images/australia-main-img.jpg" alt="prep-image-1">
+
+        </section>
+
+        <section id="second-info" class="info-container animatable">
+
+            <div>
+
+                <h2>Our Mission</h2>
+
+                <div class="info">
+                    To connect Nepali students with world-class education opportunities abroad through honest guidance,
+                    expert counseling, and lifelong support. We aim to bridge the gap between dreams and destinations —
+                    one student at a time
+                </div>
+
+            </div>
+
+            <img src="Images/australia-main-img.jpg" alt="">
+        </section>
+
+        <section id="third-info" class="info-container animatable">
+
+            <div>
+
+                <h2>Our Vision</h2>
+
+                <div class="info">
+                    To become a leading educational consultancy known for transparency, student success, and long-term
+                    trust. We envision a future where every learner can study confidently across borders without
+                    confusion or financial stress.
+                </div>
+
+                <div>
+
+                    <h2>What we do</h2>
+
+                    <div class="info">
+                        We guide you through every stage of your study abroad journey — from selecting the right course
+                        to getting your visa approved.
+                    </div>
+
+                </div>
+            </div>
+
+            <img src="Images/australia-main-img.jpg" alt="">
+        </section>
+
+        <section id="key-services" class="info-container animatable">
+
+
+            <h2>our Key services include: </h2>
+
+            <ul class="animatable">
+                <li>Career and academic counseling</li>
+                <li>University and course selection</li>
+                <li>Application and visa guidance</li>
+                <li>Documentation and financial support advice</li>
+                <li>English test preparation (IELTS, PTE, SAT, GRE, GMAT)</li>
+                <li>Pre-departure orientation and post-arrival suppor</li>
+            </ul>
+
+            <div class="focus animatable">
+                Whether it's Australia, Canada, Japan, or the UK — we help you make a confident start.
+            </div>
+
+        </section>
+
+        <section id="choose-us" class="info-container animatable">
+
+            <h2>Why choose us</h2>
+
+            <ul class="animatable">
+                <li>Transparent Process — no false promises, no hidden charges</li>
+                <li>Expert Guidance — experienced counselors with real success stories</li>
+                <li>Quick Support — personalized help from start to finish</li>
+                <li>Global Reach — direct links with universities and institutions abroad</li>
+                <li>Practical Approach — we focus on results, not just paperwork</li>
+            </ul>
+
+        </section>
+
+        <section id="get-in-touch" class="info-container animatable">
+
+            <div>
+                <h2>Get In Touch</h2>
+
+                <div class="info">
+                    Let's make your study abroad journey simple and successful. Visit our office, send us a message, or
+                    join one of our free counseling sessions
+                </div>
+
+                <div id="contact-info" class="animatable">
+
+                    <ul>
+                        <li>
+                            <img src="Images/phone.svg" alt="Phone">
+                            <a href="#">+977 9800000000</a>,&nbsp;
+                            <a href="#">023-000000</a>
+                        </li>
+                        <li>
+                            <img src="Images/mail.svg" alt="mail">
+                            <a href="#">info@abroadbridge.com</a>
+                        </li>
+                        <li>
+                            <img src="Images/location.svg" alt="location">
+                            Abroad Bridge Consultancy, Birtamode, Jhapa, Nepal
+                        </li>
+                    </ul>
+
+                    <a href="contact-us.html" class="contact-now-button">Get in Contact Now!</a>
+                </div>
+
+                
+               
+
+            </div>
+
+            <img src="telephone-img.jpg" alt="Telephone Image">
+
+        </section>
+
+
+    </main>
+
+
+    <script src="nav-script.js"></script>
+    <script src="animation-script.js"></script>
+</body>
+
+</html>
