@@ -80,7 +80,7 @@
             border-radius: 20px;
             box-shadow: 0px 0px 20px 5px #d9d9d9;
             padding: 40px;
-            animation-delay: 0.3s;
+            animation-delay: 0.2s;
             opacity: 0;
         }
 
@@ -158,7 +158,7 @@
                 </svg></a>
             <a class="nav-anchor" href="preparation-classes.html">Preparation Classes</a>
             <a class="nav-anchor" href="about-us.html">About Us</a>
-            <a class="nav-anchor" href="services.html">Services</a>
+            <a class="nav-anchor" href="preparation-classes.html#our-services">Services</a>
             <a class="nav-anchor" id="contact-btn" href="contact-us.html">Contact Us</a>
         </nav>
     </header>
@@ -240,7 +240,7 @@
 
         <section id="top-container">
 
-            <div id="info-regarding-contact" class="animate-this">
+            <div id="info-regarding-contact" class="animatable">
 
                 <h2>We'd love to <br><span class="red">hear from you!</span></h2>
 
@@ -276,7 +276,7 @@
                 </div>
 
             </div>
-            <div id="contact-form" class="animate-this">
+            <div id="contact-form" class="animatable">
 
                 <form action="#">
 
@@ -335,50 +335,7 @@
     </main>
 
     <script src="nav-script.js"></script>
-    <script>
-
-        //Got it from chatgpt and modified it
-
-        // This script checks if the html element having class containg in "classes_to_animate" is shown on the screen or not
-        // If the element is not in the screen then nothing happens, but
-        // if the element was in the screen then it adds "animate-xxxx" class to the selected element
-        // This "animate-xxxx" class contains the respective animation
-
-        //Therefore if the element is shown in screen the animation is shown otherwise not shown
-
-        let classes_to_animate = [
-            ".animate-this"
-        ];
-        const animation_classes = [
-            "animate-slideFromLeft",
-        ];
-
-        const final_classes = classes_to_animate.join(", ");
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    // Require the element to be at least 50% visible
-                    if (entry.intersectionRatio >= 0.25) {
-
-                        const selectedAnimation = animation_classes[0]
-
-                        entry.target.classList.add(selectedAnimation);
-
-                        // stop observing once the animation is applied
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0.25,
-                rootMargin: "0px 0px -10% 0px"
-            }
-        );
-
-        document.querySelectorAll(final_classes).forEach((el) => observer.observe(el));
-
-    </script>
+    <script src="animation-script.js"></script>
 </body>
 
 </html>
