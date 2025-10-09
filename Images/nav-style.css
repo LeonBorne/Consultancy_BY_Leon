@@ -1,22 +1,22 @@
 /*Importing necessary fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-::selection{
+::selection {
     background-color: #8affff;
     color: inherit;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     overflow-x: hidden;
     background: linear-gradient(135deg, white, #e4e4e4);
 
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,6 +29,7 @@ header {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
+    width: 100vw;
     height: 80px;
     font-size: 17px;
     text-transform: uppercase;
@@ -40,6 +41,7 @@ header {
     top: 0;
     overflow: hidden;
 }
+
 nav {
     display: flex;
     gap: 55px;
@@ -82,18 +84,17 @@ nav {
 
 #study-abroad-hover {
     /* margin-top: 5px; */
-    padding: 40px 10px;
+    padding: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    /* gap: 10px; */
+    /* gap: 50px; */
     background-color: rgb(230, 224, 224);
-    min-height: 250px;
+    height: 300px;
     width: 100vw;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     box-sizing: border-box;
 
     /* added this by himsagar*/
@@ -114,47 +115,38 @@ nav {
     pointer-events: auto;
 }
 
-#study-abroad-hover .country-container{
-    text-decoration: none;
-}
-
-#study-abroad-hover .country-container .country-content{
+#study-abroad-hover .country-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 20px;
-    width: 250px;
-    height: 40px;
-    padding: 10px;
+    width: 200px;
+    height: 80px;
+    padding: 20px;
     font-size: 20px;
+    text-decoration: none;
     color: black;
     transition: all 0.3s ease-in;
 }
 
-.country-container .underline{
-    width: 0;
-    height: 3px;
-    background-color: green;
-    transition: width 0.3s ease;
+.country-container:hover {
+    /* outline-offset: -20px;
+    outline-width: 2px;
+    outline-color: green;
+    outline-style: solid; */
+
+    box-shadow: -1px 1px 0px 0px black;
 }
 
-.underline.run{
-    width: 100%;
-}
-
-#study-abroad-hover .country-container div img {
+#study-abroad-hover .country-container img {
     width: 80px;
     height: 40px;
     border-radius: 5px;
 }
 
-span.red{
+
+span.red {
     color: rgb(240, 50, 50);
     font-family: inherit;
-}
-
-.run{
-    width: 100%;
-    height: 1px;
-    background-color: green;
 }
