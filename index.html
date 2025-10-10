@@ -184,17 +184,17 @@
       align-items: center;
       justify-content: center;
       cursor: default;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
     }
 
     .box-container .box:hover {
       transform: translateY(-10px);
       box-shadow: 0px 5px 10px 2px #9398c7;
+      background: linear-gradient(to right, #5d6eb8, #6b7dc3);
     }
 
     .box .heading-img {
-      width: 50px;
-      height: 50x;
+      font-size: 30px;
     }
 
     .box .heading {
@@ -208,6 +208,16 @@
       color: white;
       line-height: 1.4;
       text-align: center;
+    }
+
+    #key-services .box-container{
+      margin: 0;
+    }
+
+    #key-services .box-container .box{
+      padding: 20px;
+      width: 370px;
+      height: 325px;
     }
 
     #numbers-dont-lie-section {
@@ -311,7 +321,7 @@
 
 <body>
   <header id="nav-container">
-    <a class="nav-anchor" id="main-logo" href="">
+    <a class="nav-anchor" id="main-logo" href="index.html">
 
       <img src="Images/logo.jpg" alt="Logo Image" width="100px" height="50px">
 
@@ -333,7 +343,7 @@
 
     <a class="country-container" href="australia-study.html">
       <div class="country-content">
-        <img alt="" src="https://kiec.edu.np/wp-content/themes/yootheme/cache/ba/australia-ba0bebff.webp">
+        <img alt="" src="Images/australia-flag.jpg">
         Australia
       </div>
       <div class="underline"></div>
@@ -341,7 +351,7 @@
 
     <a class="country-container" href="canada-study.html">
       <div class="country-content">
-        <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/30/canada-30f0ac8e.webp" alt="">
+        <img src="Images/canada-flag.jpg" alt="">
         Canada
       </div>
       <div class="underline"></div>
@@ -349,7 +359,7 @@
 
     <a class="country-container" href="japan-study.html">
       <div class="country-content">
-        <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/43/japan-flag-navbar-2-43b9dd8b.webp" alt="">
+        <img src="Images/japan-flag.jpg" alt="">
         Japan
       </div>
       <div class="underline"></div>
@@ -358,7 +368,7 @@
     <a class="country-container" href="southkorea-study.html">
       <div class="country-content">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/250px-Flag_of_South_Korea.svg.png"
+          src="Images/south-korea-flag.jpg"
           alt="">
         South Korea
       </div>
@@ -367,7 +377,7 @@
 
     <a class="country-container" href="france-study.html">
       <div class="country-content">
-        <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="">
+        <img src="Images/france-flag.svg" alt="">
         France
       </div>
       <div class="underline"></div>
@@ -377,7 +387,7 @@
 
     <a class="country-container" href="uk-study.html">
       <div class="country-content">
-        <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/3c/uk-3c74a9f1.webp" alt="">
+        <img src="Images/uk-flag.jpg" alt="">
         UK
       </div>
       <div class="underline"></div>
@@ -385,7 +395,7 @@
 
     <a class="country-container" href="usa-study.html">
       <div class="country-content">
-        <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/13/usa-131ea349.webp" alt="">
+        <img src="Images/usa-flag.jpg" alt="">
         USA
       </div>
       <div class="underline"></div>
@@ -393,7 +403,7 @@
 
     <a class="country-container" href="germany-study.html">
       <div class="country-content">
-        <img src="https://kiec.edu.np/wp-content/themes/yootheme/cache/6d/germany-flag-6d5001ef.webp" alt="">
+        <img src="Images/germany-flag.jpg" alt="">
         Germany
       </div>
       <div class="underline"></div>
@@ -451,7 +461,7 @@ At Abroad Bridge Consultancy, we offer comprehensive support for students aspiri
       <div class="box-container">
 
         <div class="box">
-          <img src="" alt="" class="heading-img"></img>
+          <div class="heading-img">🧠💬</div>
           <h3 class="heading">Expert Counseling</h3>
           <div class="box-info">
             Personalized guidance from experienced counselors who understand your goals
@@ -459,7 +469,7 @@ At Abroad Bridge Consultancy, we offer comprehensive support for students aspiri
         </div>
 
         <div class="box">
-          <img src="" alt="" class="heading-img">
+          <div class="heading-img">🎓🏆</div>
           <h3 class="heading">Top Universities</h3>
           <div class="box-info">
             Access to prestegious institutions across the globe with proven admission success
@@ -468,7 +478,7 @@ At Abroad Bridge Consultancy, we offer comprehensive support for students aspiri
 
         <div class="box">
 
-          <img src="" alt="" class="heading-img">
+          <div class="heading-img">🛂✈️</div>
           <h3 class="heading">Visa Assistance</h3>
           <div class="box-info">
             Complete support throughout the visa applicaiton process with highlly success rate
@@ -476,7 +486,7 @@ At Abroad Bridge Consultancy, we offer comprehensive support for students aspiri
         </div>
 
         <div class="box">
-          <img src="" alt="" class="heading-img">
+          <div class="heading-img">🔍✅</div>
           <h3 class="heading">Transparent Process</h3>
           <div class="box-info">
             no false promises, no hidden charges
@@ -485,7 +495,7 @@ At Abroad Bridge Consultancy, we offer comprehensive support for students aspiri
         </div>
 
         <div class="box">
-          <img src="" alt="" class="heading-img">
+          <div class="heading-img">👩‍🏫📈</div>
           <h3 class="heading">Expert Guidance</h3>
           <div class="box-info">
             Experienced counselors with real success stories
@@ -493,7 +503,7 @@ At Abroad Bridge Consultancy, we offer comprehensive support for students aspiri
         </div>
 
         <div class="box">
-          <img src="" alt="" class="heading-img">
+          <div class="heading-img">⚡️🤝</div>
           <h3 class="heading">Quick Support</h3>
           <div class="box-info">
             Personalized help from start to finish
@@ -501,7 +511,7 @@ At Abroad Bridge Consultancy, we offer comprehensive support for students aspiri
         </div>
 
         <div class="box">
-          <img src="" alt="" class="heading-img">
+          <div class="heading-img">🌍✈️</div>
           <h3 class="heading">Global Reach</h3>
           <div class="box-info">
             Direct links with universities and institutions abroad
@@ -509,7 +519,7 @@ At Abroad Bridge Consultancy, we offer comprehensive support for students aspiri
         </div>
 
         <div class="box">
-          <img src="" alt="" class="heading-img">
+          <div class="heading-img">🛠️📋</div>
           <h3 class="heading">Practical Apporach</h3>
           <div class="box-info">
             We focus on results, not just paperwork
