@@ -5,7 +5,15 @@ const animation_classes = [
     "animate-slideFromLeft",
 ];
 
+const numberAnimationID = [
+    "students",
+    "countries",
+    "visa-success-rate",
+    "year-exp"
+]
+
 const final_classes = classes_to_animate.join(", ");
+
 
 const observer = new IntersectionObserver(
     (entries) => {
@@ -13,12 +21,44 @@ const observer = new IntersectionObserver(
             // Require the element to be at least 50% visible
             if (entry.intersectionRatio >= 0.25) {
 
-                const selectedAnimation = animation_classes[0]
+                numberAnimationID.forEach(element => {
+                    if(element === entry.target.id){
+                        
+                        let elem = (entry.target.children)[0]
+                        let targetNumber, timeInterval;
+                        switch (elem.id){
+                            case "students-num":
+                                targetNumber = 2000
+                                timeInterval = 20
+                                break
+                            case "countries-num":
+                                targetNumber = 15
+                                timeInterval = 100
+                                break
+                            case "visa-num":
+                                console.log(elem)
+                                targetNumber = 98
+                                timeInterval = 50
+                                break
+                            case "exp-num":
+                                targetNumber = 10
+                                timeInterval = 100 
+                        }
 
-                entry.target.classList.add(selectedAnimation);
+                        animateNumbers(elem, targetNumber, timeInterval)
 
-                // stop observing once the animation is applied
-                observer.unobserve(entry.target);
+                    }
+                });
+
+                
+                {
+                    const selectedAnimation = animation_classes[0]
+    
+                    entry.target.classList.add(selectedAnimation);
+    
+                    // stop observing once the animation is applied
+                    observer.unobserve(entry.target);
+                }
             }
         });
     },

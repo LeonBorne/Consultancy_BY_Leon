@@ -3,7 +3,8 @@
 
 ::selection{
     background-color: #8affff;
-    color: inherit;
+    color: #28333a;
+;
 }
 
 html{
@@ -11,9 +12,9 @@ html{
 }
 
 body{
+    margin-top: 80px;
     overflow-x: hidden;
-    background: linear-gradient(135deg, white, #e4e4e4);
-
+    background-color: aliceblue;
 }
 
 *{
@@ -29,6 +30,7 @@ header {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
+    width: 100vw;
     height: 80px;
     font-size: 17px;
     text-transform: uppercase;
@@ -36,10 +38,11 @@ header {
     font-weight: 600;
     box-shadow: 0px 2px 10px #717171;
     z-index: 10;
-    position: sticky;
+    position: fixed;
     top: 0;
     overflow: hidden;
 }
+
 nav {
     display: flex;
     gap: 55px;
