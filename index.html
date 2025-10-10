@@ -14,59 +14,296 @@
     * {
       padding: 0;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+      color: #28333a;
 
     }
 
     main {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
       height: 570px;
-      font-family: "Poppins", "Roboto", Airal, sans-serif;
+      font-family: "Poppins", "Roboto", Arial, sans-serif;
     }
 
-    #main-text {
-      background-color: lightcyan;
-      height: 570px;
+    #main-heading-section {
+      width: 100vw;
+      height: 400px;
+      overflow: hidden;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+      background-color: rgb(109, 105, 205);
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+
+    #main-heading-section::selection {
+      color: #28333a;
+    }
+
+    #main-heading {
+      margin-top: 50px;
+      font-size: 65px;
+      font-weight: 800;
+      color: white;
+    }
+
+
+
+    #main-info {
+      font-weight: 500;
+      color: white;
+      font-size: 23px;
+    }
+
+
+    #main-more-btn {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    #main-more-btn a {
+      border: 2px solid white;
+      width: 200px;
+      height: 50px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
       justify-content: center;
-
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
-    #main-text h2 {
+    #start-jrny-btn {
+      background-color: white;
+      color: rgb(109, 105, 205);
+      box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+    }
+
+    #start-jrny-btn:hover {
+      background-color: rgb(201, 201, 201);
+      border: 2px solid rgb(201, 201, 201);
+      color: rgb(74, 71, 136);
+    }
+
+
+    #explore-programs-btn {
+      color: white;
+      background-color: rgb(109, 105, 205);
+    }
+
+    #explore-programs-btn:hover {
+      border: 2px solid rgb(204, 204, 204);
+      background-color: rgb(94, 91, 179);
+    }
+
+
+    #second-section {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 100px;
+    }
+
+    #second-section img {
+      width: 500px;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    #second-section #second-info {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    #second-info h2 {
+      font-weight: 700;
+      font-size: 28px;
+      color: rgb(14, 102, 143);
+    }
+
+    #second-info #learn-more {
+      text-decoration: none;
+      color: blue;
       text-transform: uppercase;
-      font-size: 50px;
-      padding: 20px 100px;
-      line-height: 1.5;
+      transition: all 0.2s ease;
+      display: flex;
+      gap: 5px;
+    }
+
+    #second-info #learn-more:hover {
+      color: rgb(0, 0, 119);
+    }
+
+    #why-choose-us,
+    #key-services {
+      margin: 30px 40px;
+    }
+
+    #why-choose-us h2,
+    #key-services h2 {
       text-align: center;
-      font-family: "Roboto Condensed", sans-serif;
-      animation-delay: 0.3s;
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: rgb(14, 102, 143);
+    }
+
+    .box-container {
+      margin: 0 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
 
     }
 
-    span.red {
-      color: rgb(192, 41, 41);
-      font-family: inherit;
+    .box-container .box {
+      width: 350px;
+      height: 250px;
+      background: linear-gradient(to right, #6872da, #8474c5);
+      border: 1px solid #b1b6ed;
+      border-radius: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    #main-text p {
+    .box-container .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 5px 10px 2px #9398c7;
+    }
+
+    .box .heading-img {
+      width: 50px;
+      height: 50x;
+    }
+
+    .box .heading {
       text-align: center;
-      padding: 10px 100px;
-      font-size: 19px;
-      color: #2c2c2c;
-      animation-delay: 0.5s;
+      font-weight: 700;
+      font-size: 23px;
+      color: white;
     }
 
+    .box .box-info {
+      color: white;
+      line-height: 1.4;
+      text-align: center;
+    }
 
-    #main-img img {
-      width: 400px;
-      height: 575px;
+    #numbers-dont-lie-section {
+      width: 100vw;
+      height: 100px;
       overflow: hidden;
+      background-color: rgb(109, 105, 205);
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+    }
+
+    #numbers-dont-lie-section h3 {
+      color: white;
+      font-weight: 700;
+      font-size: 35px;
+    }
+
+    #numbers-dont-lie-section div {
+      color: white;
+      font-weight: 400;
+    }
+
+    #footer-section {
+      border-top: 2px solid rgb(93, 91, 180);
+      background-color: rgb(109, 105, 205);
+      padding: 20px 110px;
+    }
+
+    #footer-section h2 {
+      color: white;
+      font-size: 40px;
+      font-family: "Roboto Condensed", "Poppins", Arial, sans-serif;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+
+    div.info {
+      color: white;
+      text-align: justify;
+      margin: 10px 0;
+    }
+
+
+    #contact-info {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #contact-info ul li {
+      color: white;
+      list-style-type: none;
+      line-height: 2;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+    }
+
+    #contact-info ul li img {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+      box-shadow: none;
+    }
+
+    #contact-info ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    #contact-info ul li a:hover {
+      color: blue;
+    }
+
+    .contact-now-button {
+      /* margin-top: 20px; */
+      color: rgb(251, 236, 236);
+      background-color: rgb(224, 0, 0);
+      font-weight: 600;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      max-width: 180px;
+    }
+
+    .contact-now-button:hover {
+      background-color: rgb(185, 0, 0);
     }
   </style>
 </head>
@@ -167,24 +404,296 @@
 
   <main class="main-container">
 
-    <section id="main-text" class="animatable">
+    <section id="main-heading-section">
+      <div id="main-heading">
+        Your Gateway to <br> Global Education
+      </div>
 
-      <h2 class="animatable">We <span class="red">simplify</span> global education and <span class="red">career</span> opportunities</h2>
-      <p class="animatable">At Abroad Bridge Consultancy, we believe every student deserves the <br>chance to reach their academic and
-        professional dreams</p>
+      <div id="main-info">
+        Transform your dreams into reality with expert guidance and personalized support
+      </div>
+
+      <div id="main-more-btn">
+        <a href="contact-us.html" id="start-jrny-btn">Start Journey</a>
+        <a onclick="window.scrollTo({ top : 300, left : 0, behavior: 'smooth'})" id="explore-programs-btn">Explore
+          Programs</a>
+      </div>
 
     </section>
 
-    <section id="main-img" class="animatable">
-      <img src="" alt="">
+    <section id="second-section" class="animatable">
+
+      <img src="Images/australia-main-img.jpg" alt="second-section-image">
+
+      <div id="second-info">
+
+        <h2 id="second-header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique.</h2>
+        <div id="second-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, sit. Sit magni dolorum totam quae.
+          Reiciendis eveniet sed quo iure enim dolore, quod quisquam animi, porro, nobis voluptatem ea beatae aut
+          facilis maiores aperiam at in eum! Magnam, laudantium!
+        </div>
+        <a href="preparation-classes.html#our-services" id="learn-more">
+          Learn More
+          <img src="Images/arrow-top-right.svg" alt="" style="width: 20px; height: 20px; align-self: flex-start;">
+
+        </a>
+
+      </div>
+
+
+    </section>
+
+
+    <section id="why-choose-us" class="animatable">
+
+      <h2>Why choose Abroad Bridge?</h2>
+
+      <div class="box-container">
+
+        <div class="box">
+          <img src="" alt="" class="heading-img"></img>
+          <h3 class="heading">Expert Counseling</h3>
+          <div class="box-info">
+            Personalized guidance from experienced counselors who understand your goals
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="" alt="" class="heading-img">
+          <h3 class="heading">Top Universities</h3>
+          <div class="box-info">
+            Access to prestegious institutions across the globe with proven admission success
+          </div>
+        </div>
+
+        <div class="box">
+
+          <img src="" alt="" class="heading-img">
+          <h3 class="heading">Visa Assistance</h3>
+          <div class="box-info">
+            Complete support throughout the visa applicaiton process with highlly success rate
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="" alt="" class="heading-img">
+          <h3 class="heading">Transparent Process</h3>
+          <div class="box-info">
+            no false promises, no hidden charges
+          </div>
+
+        </div>
+
+        <div class="box">
+          <img src="" alt="" class="heading-img">
+          <h3 class="heading">Expert Guidance</h3>
+          <div class="box-info">
+            Experienced counselors with real success stories
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="" alt="" class="heading-img">
+          <h3 class="heading">Quick Support</h3>
+          <div class="box-info">
+            Personalized help from start to finish
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="" alt="" class="heading-img">
+          <h3 class="heading">Global Reach</h3>
+          <div class="box-info">
+            Direct links with universities and institutions abroad
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="" alt="" class="heading-img">
+          <h3 class="heading">Practical Apporach</h3>
+          <div class="box-info">
+            We focus on results, not just paperwork
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <section id="numbers-dont-lie-section">
+
+      <div id="students" class="animatable">
+
+        <h3 id="students-num">
+          2000+
+        </h3>
+
+        Students Placed
+
+      </div>
+
+      <div id="countries" class="animatable">
+
+        <h3 id="countries-num">
+          15+
+        </h3>
+        Countries
+
+      </div>
+
+      <div id="visa-success-rate" class="animatable">
+        <h3 id="visa-num">
+          98%
+        </h3>
+        Visa Success Rate
+      </div>
+
+      <div id="year-exp" class="animatable">
+        <h3 id="exp-num">10+</h3>
+        Years of Experience
+      </div>
+
+    </section>
+
+
+    <section id="key-services" class="animatable">
+
+      <h2>Our Key Services Include:</h2>
+      <div class="box-container">
+
+        <div class="box">
+          <h3 class="heading">Career and academic counseling</h3>
+          <div class="box-info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur quaerat atque modi est porro.
+          </div>
+        </div>
+
+        <div class="box">
+          <h3 class="heading">University and course selection</h3>
+          <div class="box-info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur quaerat atque modi est porro.
+          </div>
+        </div>
+
+        <div class="box">
+          <h3 class="heading">Application and visa guidance</h3>
+          <div class="box-info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur quaerat atque modi est porro.
+          </div>
+        </div>
+
+        <div class="box">
+          <h3 class="heading">Documentation and financial support advice</h3>
+          <div class="box-info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur quaerat atque modi est porro.
+          </div>
+        </div>
+
+        <div class="box">
+          <h3 class="heading">English test preparation (IELTS, PTE, SAT, GRE, GMAT)</h3>
+          <div class="box-info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur quaerat atque modi est porro.
+          </div>
+        </div>
+
+        <div class="box">
+          <h3 class="heading">Pre-departure orientation and post-arrival support</h3>
+          <div class="box-info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur quaerat atque modi est porro.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+
+
+    <h1>I couldn't think of anything!! This place is empty!</h1>
+
+
+
+
+
+
+    <section id="footer-section">
+
+      <h2 class="animatable">Get In Touch</h2>
+
+      <div class="info animatable">
+        Let's make your study abroad journey simple and successful. Visit our office, send us a message, or
+        join one of our free counseling sessions
+      </div>
+
+      <div id="contact-info" class="animatable">
+
+        <ul>
+          <li>
+            <img src="Images/phone-white.svg" alt="Phone">
+            <a href="#">+977 9800000000</a>,&nbsp;
+            <a href="#">023-000000</a>
+          </li>
+          <li>
+            <img src="Images/mail-white.svg" alt="mail">
+            <a href="#">info@abroadbridge.com</a>
+          </li>
+          <li>
+            <img src="Images/location-white.svg" alt="location">
+            Abroad Bridge Consultancy, Birtamode, Jhapa, Nepal
+          </li>
+        </ul>
+
+        <a href="contact-us.html" class="contact-now-button">Get in Contact Now!</a>
+      </div>
+
     </section>
 
 
 
   </main>
 
+
   <script src="nav-script.js"></script>
   <script src="animation-script.js"></script>
+  <script>
+
+    function animateNumbers(element, targetNumber, timeInterval){
+      let count = 0
+
+      const interval = setInterval( () => {
+        if (targetNumber >= 100){
+          count += 10
+        }
+        else if (targetNumber >= 30){
+          count += 2
+        }
+        else{
+          count++
+        }
+
+        if(element.id === "visa-num"){element.innerText = count + "%"}
+        else{element.innerText = count + "+"}
+
+        if(count === targetNumber || count > targetNumber){
+          clearInterval(interval)
+
+          if(element.id === "visa-num"){element.innerText = targetNumber + "%"}
+          else{element.innerText = targetNumber + "+"}
+        }
+
+      }, timeInterval)
+
+    }
+
+    
+
+  </script>
 </body>
 
 </html>
